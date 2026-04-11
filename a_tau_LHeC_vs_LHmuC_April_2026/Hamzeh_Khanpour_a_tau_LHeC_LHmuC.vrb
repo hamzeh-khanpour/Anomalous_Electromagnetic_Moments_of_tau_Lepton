@@ -1,0 +1,14 @@
+\frametitle{Backup: MG settings summary}
+\begin{block}{Hard-process setup}
+\scriptsize\ttfamily
+import model SMEFTsim\_top\_alphaScheme\_UFO\\
+generate a a > ta+ ta- / h h1 NP=0 SMHLOOP=0\\
+\vspace{0.5ex}
+import model SMEFTsim\_top\_alphaScheme\_UFO\\
+generate a a > ta+ ta- / h h1 NP<=2 SMHLOOP=0
+\end{block}
+\begin{itemize}
+\centering
+    \item Beam configurations: \(7~\mathrm{TeV}\oplus 50~\mathrm{GeV}\) for LHeC and \(7~\mathrm{TeV}\oplus 500~\mathrm{GeV}\) for LH$\mu$C.
+    \item Equivalent-photon setup through \texttt{iww}; minimal generation cut \(m_{\ell\ell}>10~\mathrm{GeV}\).
+\end{itemize}
