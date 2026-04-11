@@ -1,161 +1,254 @@
-# Anomalous Electromagnetic Moments of the Tau Lepton
+# Anomalous Electromagnetic Moments of the Tau Lepton: LHeC vs LHmuC
 
-This repository contains a working analysis setup for studying the anomalous electromagnetic moments of the tau lepton in photon-induced tau-pair production, with a focus on kinematic distributions and SM vs BSM comparisons at the LHeC.
+This directory contains the April 2026 analysis setup for a direct comparison of photon-induced
+\(\gamma\gamma \to \tau^+\tau^-\) production at the **LHeC** and the **LHmuC**, focusing on the impact of a nonzero anomalous tau magnetic moment benchmark.
 
-The codebase is best understood as a **research workspace** rather than a packaged software release. It includes:
+The current study compares:
 
-- SMEFT-related inputs for connecting an anomalous tau magnetic moment to the Wilson coefficient `ceB`
-- UFO model archives and a sample `param_card.dat`
-- Python scripts for parsing LHE event files
-- Plotting scripts for differential distributions and SM/BSM ratios
-- EPA reference tables used as overlays in the final figures
-- Representative output plots already committed to the repository
+- **LHeC @ 1.2 TeV**
+- **LHmuC @ 3.7 TeV**
+- **SM** vs **BSM** with **\(\delta a_\tau = 0.008\)**
 
----
-
-## Physics scope
-
-The analysis targets tau-pair production in photon-induced processes and compares:
-
-- the Standard Model prediction
-- benchmark scenarios with nonzero anomalous tau electromagnetic moments, implemented through SMEFT-style inputs
-
-The main observables studied in the scripts are:
-
-- transverse momentum of `τ+` and `τ−`
-- pseudorapidity of `τ+` and `τ−`
-- rapidity of the `τ+τ−` pair
-- invariant mass of the `τ+τ−` pair
-- ratios of BSM to SM distributions
-- simple linear fits to ratio distributions with statistical uncertainties
+using merged MadGraph event samples, differential distributions, and mass-dependent ratio fits.
 
 ---
 
-## Repository layout
+## Directory contents
 
-```text
-Anomalous_Electromagnetic_Moments_of_tau_Lepton/
+This subdirectory contains:
 
+- `analyze_tautau_sm_bsm_lhec.py`  
+  Driver script for the **LHeC** analysis.
+
+- `analyze_tautau_sm_bsm_lhmuc.py`  
+  Driver script for the **LHmuC** analysis.
+
+- `tautau_sm_bsm_common.py`  
+  Shared analysis utilities used by both collider-specific drivers.
+
+- `plots_LHeC_SM_vs_BSM_delta_aTau_0p008/`  
+  Output plots and summary text files for the LHeC benchmark.
+
+- `plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/`  
+  Output plots and summary text files for the LHmuC benchmark.
+
+---
+
+## Physics goal
+
+The purpose of this analysis is to compare how a benchmark anomalous tau magnetic moment modifies the
+kinematics of photon-induced tau-pair production in two future lepton--hadron collider environments.
+
+The main observables studied are:
+
+- the invariant-mass spectrum
+  \[
+  \frac{d\sigma}{dM_{\tau^+\tau^-}}
+  \]
+- the pair-rapidity distribution
+  \[
+  \frac{d\sigma}{dY_{\tau^+\tau^-}}
+  \]
+- the ratio between BSM and SM predictions
+  \[
+  \frac{\text{BSM}}{\text{SM}}
+  \]
+- linear fits to the ratio as a function of \(M_{\tau^+\tau^-}\)
+
+The physical motivation is that anomalous dipole-type couplings are expected to harden the invariant-mass spectrum, so the largest deviations from the Standard Model should appear in the high-mass tail.
+
+---
+
+## Event samples used in this study
+
+For each collider and each theory hypothesis, the analysis is built from **five independent MadGraph runs**:
+
+- `run_01`
+- `run_02`
+- `run_03`
+- `run_04`
+- `run_05`
+
+Each run contains **1M unweighted events**, and the scripts automatically read all run directories found under the corresponding `Events/` folder, extract the LHE information, and merge the kinematic arrays into a single effective **5M-event sample**.
+
+This is done separately for:
+
+- **LHeC, SM**
+- **LHeC, BSM**
+- **LHmuC, SM**
+- **LHmuC, BSM**
+
+The integrated cross section is read directly from each LHE header, and the merged sample uses the event-count-weighted average cross section.
+
+---
+
+## Analysis strategy
+
+The workflow implemented here is:
+
+1. Read all `run_*` LHE or LHE.GZ files under the chosen `Events/` directory.
+2. Parse final-state \(\tau^+\) and \(\tau^-\) four-momenta from each event.
+3. Build the pair observables:
+   - \(M_{\tau^+\tau^-}\)
+   - \(Y_{\tau^+\tau^-}\)
+4. Convert the binned event counts into weighted differential spectra using the total cross section read from the LHE headers.
+5. Construct two types of ratio plots:
+   - a **weighted physical ratio** based on differential spectra,
+   - a **legacy-style count ratio** designed to reproduce the earlier plot style.
+6. Fit the ratio with a simple linear form
+   \[
+   y(M) = aM + b
+   \]
+   to summarize whether the BSM enhancement grows with invariant mass.
+
+The slope parameter is therefore used as a compact diagnostic of **tail hardening**.
+
+---
+
+## Generated outputs
+
+For each collider, the scripts produce:
+
+- `Invariant_mass_tau_pair_SM_vs_BSM_delta_aTau.png`
+- `Rapidity_tau_pair_SM_vs_BSM_delta_aTau.png`
+- `Ratio_BSM_over_SM_MtauTau_weighted.png`
+- `Ratio_Obs_Exp_with_Luminosity.png`
+- `Ratio_Obs_Exp_with_Luminosity_Fit_uniform.png`
+- `Ratio_Obs_Exp_with_Luminosity_Fit_custom_bins.png`
+- `analysis_summary.txt`
+
+The `analysis_summary.txt` file reports:
+
+- the number of runs successfully read,
+- the total merged event count,
+- the effective cross section of the merged sample,
+- the effective luminosity implied by the sample,
+- and the fit parameters for both weighted and legacy-style ratio analyses.
+
+---
+
+## Current benchmark results
+
+For the currently committed benchmark \(\delta a_\tau = 0.008\):
+
+### LHeC
+
+- SM cross section: `50.6950 pb`
+- BSM cross section: `51.9226 pb`
+- merged events per sample: `5,000,000`
+
+### LHmuC
+
+- SM cross section: `55.0944 pb`
+- BSM cross section: `56.4608 pb`
+- merged events per sample: `5,000,000`
+
+In both machines, the BSM benchmark produces a ratio above unity in the hard region, indicating that the anomalous coupling makes the invariant-mass spectrum harder than the Standard Model prediction.
+
+The LHmuC comparison shows a stronger rise of the ratio with invariant mass than the LHeC case, suggesting a more pronounced hard-tail enhancement for the same benchmark.
+
+---
+
+## Running the analysis
+
+### LHeC
+
+```bash
+python3 analyze_tautau_sm_bsm_lhec.py
 ```
 
+### LHmuC
+
+```bash
+python3 analyze_tautau_sm_bsm_lhmuc.py
+```
+
+Optional command-line arguments are available, for example:
+
+```bash
+python3 analyze_tautau_sm_bsm_lhec.py --display-lumi-fb 100
+python3 analyze_tautau_sm_bsm_lhmuc.py --display-lumi-fb 100
+```
+
+The scripts currently assume local MG5 event directories of the form:
+
+```text
+/home/.../aa_tautau_SM_NP_0_SMEFTsim_top_alphaScheme_UFO_LHeC/Events
+/home/.../aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHeC/Events
+/home/.../aa_tautau_SM_NP_0_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events
+/home/.../aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events
+```
+
+If your files are stored elsewhere, edit the default paths in the two driver scripts or pass explicit command-line paths.
+
 ---
 
-## What each main script does
+## Notes on the ratio plots
 
----
+Two ratio styles are kept in this directory on purpose.
 
-## Expected workflow
+### 1. Weighted physical ratio
 
-A typical workflow using this repository is:
+This uses
 
-1. **Choose a benchmark anomalous coupling**
-   - Use `calculate_ceB.py` to estimate the `ceB` value corresponding to a target `Δa_τ`.
+\[
+\frac{(d\sigma/dM)_{\text{BSM}}}{(d\sigma/dM)_{\text{SM}}}
+\]
 
-2. **Prepare the SMEFT setup**
-   - Extract the UFO archive you want to use.
-   - Update the relevant entries in `param_card.dat`.
+and is the more directly physical comparison.
 
-3. **Generate event samples externally**
-   - Produce SM and anomalous-coupling `.lhe` files.
-   - If needed, merge several runs with `Combines_Multiple_LHE_Files.py`.
+### 2. Legacy ratio plots
 
-4. **Run the analysis scripts**
-   - Start from the simpler parsers if you want to validate the event content.
-   - Move to the EPA and ratio scripts for the final physics plots.
+These are retained to reproduce the style of the earlier LHeC analysis plots and to facilitate visual continuity with previous versions of the study.
 
-5. **Inspect the committed output figures**
-   - Use them as examples of the expected plotting style and output naming.
+The linear fit
+
+\[
+y(M) = aM + b
+\]
+
+is not intended as a fundamental theory model. It is used as a compact summary of whether the BSM effect is approximately flat or grows toward high invariant mass.
 
 ---
 
 ## Requirements
 
-The Python scripts rely on standard scientific Python tools:
+The scripts use standard scientific Python packages:
 
 ```bash
-pip install numpy matplotlib scipy mplhep
+pip install numpy matplotlib scipy
 ```
 
-You will also need:
-
-- Python 3
-- locally available `.lhe` event files
-- optionally, MadGraph-compatible UFO model files if you want to reproduce the generation step
+Python 3 is required.
 
 ---
 
-## Important reproducibility note
+## Reproducibility note
 
-At the moment, the scripts use **hard-coded absolute local paths** such as:
+This directory is best viewed as a **research analysis workspace** rather than a polished standalone package.
 
-- local `MG5_aMC_*` directories
-- manually named SM and BSM `.lhe` files under `/home/...`
+The main reasons are:
 
-So before running the analysis on another machine, you should edit the file paths near the bottom of each script.
+- local MG5 paths are hard-coded by default,
+- the analysis is tied to locally produced LHE event samples,
+- the committed plot directories reflect a specific benchmark setup.
 
-The repository therefore works best as:
-
-- a documented analysis record
-- a source of plotting scripts and benchmark inputs
-- a basis for refactoring into a more portable pipeline
-
-rather than as a drop-in package that runs unchanged on a fresh machine.
+Still, the structure is now substantially cleaner than the earlier single-script exploratory workflow, since the collider-specific drivers and the common parsing/plotting utilities are separated.
 
 ---
 
-## Representative outputs
+## Related context inside the parent repository
 
-The repository already includes several output figures, for example:
+This directory is part of the larger repository:
 
-- `aa_to_tauta_analysis_code/Invariant_mass_tau_pair_SM_atau_EPA.jpg`
-- `aa_to_tauta_analysis_code/Rapidity_tau_pair_SM_atau_EPA.jpg`
-- `aa_to_tauta_analysis_code/Ratio_Obs_Exp_with_Luminosity_Fit_Final.jpg`
-- `aa_to_tauta_analysis_code/Ratio_Obs_Exp_with_Luminosity_Fit_Final_0.0042.jpg`
-- `aa_to_tauta_analysis_code/Ratio_Obs_Exp_with_Luminosity_Fit_Final_bins_0.0042.jpg`
+`Anomalous_Electromagnetic_Moments_of_tau_Lepton`
 
-You can render a few of them directly in GitHub:
+The parent repository also contains:
 
-### Invariant-mass comparison
-
-![Invariant mass](aa_to_tauta_analysis_code/Invariant_mass_tau_pair_SM_atau_EPA.jpg)
-
-### Rapidity comparison
-
-![Rapidity](aa_to_tauta_analysis_code/Rapidity_tau_pair_SM_atau_EPA.jpg)
-
-### Ratio with fit
-
-![Ratio fit](aa_to_tauta_analysis_code/Ratio_Obs_Exp_with_Luminosity_Fit_Final_0.0042.jpg)
-
----
-
-## References included in the repository
-
-The `a_tau/` directory also contains CMS-related reference documents:
-
-- `SMP-23-005-paper-v21.pdf`
-- `SMP-23-005-pas.pdf`
-
-These appear to serve as local analysis references connected to the tau anomalous moment study.
-
----
-
-## Suggested future cleanup
-
-To make the repository easier for collaborators to use, the next most useful improvements would be:
-
-1. replace hard-coded paths with command-line arguments or a config file
-2. add a `requirements.txt`
-3. separate input data, scripts, and generated figures more cleanly
-4. provide one main driver script for the final analysis chain
-5. document how the benchmark cross sections were obtained
-6. add a license file
-
----
-
-## Citation / acknowledgement
-
-If you use this repository in academic work, please cite the associated paper, note, or analysis documentation that accompanies the study.
+- earlier LHeC-only plotting scripts,
+- SMEFT parameter utilities,
+- UFO model archives,
+- and CMS-related reference material used in connection with the anomalous tau moment study.
 
 ---
 
