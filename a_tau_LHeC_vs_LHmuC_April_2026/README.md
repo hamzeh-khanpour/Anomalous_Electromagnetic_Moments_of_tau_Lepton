@@ -1,13 +1,13 @@
 # Anomalous Electromagnetic Moments of the Tau Lepton: LHeC vs LHmuC
 
 This directory contains the April 2026 analysis setup for a direct comparison of photon-induced
-\(\gamma\gamma \to \tau^+\tau^-\) production at the **LHeC** and the **LHmuC**, focusing on the impact of a nonzero anomalous tau magnetic moment benchmark.
+$\gamma\gamma \to \tau^+\tau^-$ production at the **LHeC** and the **LHmuC**, focusing on the impact of a nonzero anomalous tau magnetic moment benchmark.
 
 The current study compares:
 
 - **LHeC @ 1.2 TeV**
 - **LHmuC @ 3.7 TeV**
-- **SM** vs **BSM** with **\(\delta a_\tau = 0.008\)**
+- **SM** vs **BSM** with **$\delta a_\tau = 0.008$**
 
 using merged MadGraph event samples, differential distributions, and mass-dependent ratio fits.
 
@@ -42,7 +42,7 @@ kinematics of photon-induced tau-pair production in two future lepton--hadron co
 The main observables studied are:
 
 - the invariant-mass spectrum
-  $  \frac{d\sigma}{dM_{\tau^+\tau^-}}$
+  $\frac{d\sigma}{dM_{\tau^+\tau^-}}$
 - the pair-rapidity distribution
   $\frac{d\sigma}{dY_{\tau^+\tau^-}}$
 - the ratio between BSM and SM predictions
@@ -81,18 +81,16 @@ The integrated cross section is read directly from each LHE header, and the merg
 The workflow implemented here is:
 
 1. Read all `run_*` LHE or LHE.GZ files under the chosen `Events/` directory.
-2. Parse final-state \(\tau^+\) and \(\tau^-\) four-momenta from each event.
+2. Parse final-state $\tau^+$ and $\tau^-$ four-momenta from each event.
 3. Build the pair observables:
-   - \(M_{\tau^+\tau^-}\)
-   - \(Y_{\tau^+\tau^-}\)
+   - $M_{\tau^+\tau^-}$
+   - $Y_{\tau^+\tau^-}$
 4. Convert the binned event counts into weighted differential spectra using the total cross section read from the LHE headers.
 5. Construct two types of ratio plots:
    - a **weighted physical ratio** based on differential spectra,
    - a **legacy-style count ratio** designed to reproduce the earlier plot style.
 6. Fit the ratio with a simple linear form
-   \[
-   y(M) = aM + b
-   \]
+   $y(M) = aM + b$
    to summarize whether the BSM enhancement grows with invariant mass.
 
 The slope parameter is therefore used as a compact diagnostic of **tail hardening**.
@@ -123,7 +121,7 @@ The `analysis_summary.txt` file reports:
 
 ## Current benchmark results
 
-For the currently committed benchmark \(\delta a_\tau = 0.008\):
+For the currently committed benchmark $\delta a_\tau = 0.008$:
 
 ### LHeC
 
@@ -185,9 +183,7 @@ Two ratio styles are kept in this directory on purpose.
 
 This uses
 
-\[
-\frac{(d\sigma/dM)_{\text{BSM}}}{(d\sigma/dM)_{\text{SM}}}
-\]
+$\frac{(d\sigma/dM)_{\text{BSM}}}{(d\sigma/dM)_{\text{SM}}}$
 
 and is the more directly physical comparison.
 
@@ -197,9 +193,7 @@ These are retained to reproduce the style of the earlier LHeC analysis plots and
 
 The linear fit
 
-\[
-y(M) = aM + b
-\]
+$y(M) = aM + b$
 
 is not intended as a fundamental theory model. It is used as a compact summary of whether the BSM effect is approximately flat or grows toward high invariant mass.
 
@@ -248,4 +242,4 @@ The parent repository also contains:
 
 ## Author
 
-Hamzeh Khanpour
+Hamzeh Khanpour (hamzeh.khanpour@agh.edu.pl)
