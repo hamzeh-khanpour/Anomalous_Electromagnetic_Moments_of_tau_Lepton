@@ -1,0 +1,1860 @@
+%!PS-Adobe-2.0
+%%BoundingBox: -20 -20 450  450 
+%%DocumentFonts: Helvetica
+%%Pages:  7 
+%!MadGraph
+%
+% Feynman Diagrams drawn by MadGraph5_aMC@NLO
+%
+% Using FEYNMAN DRAW
+% A program by David J. Summers to draw
+% Feynman diagrams. (c) 1992
+% Version 2.7 (c) 1993
+%
+% Comments and questions to 
+%  D.J.Summers@uk.ac.durham
+%
+
+/Fnopoints 10 def 
+/Fr 2.5 def 
+/pi 3.14159265359 def
+
+/Frmod {dup 360 div floor 360 mul sub} def
+/Fsign {0 ge {1} {-1} ifelse} def
+
+/Fbasis
+{/Fby exch def /Fbx exch def /Fdist Fbx Fbx
+mul Fby Fby mul add sqrt def /Fxl Fbx Fdist
+div Fr mul def /Fyl Fby Fdist div Fr mul def
+/Fxt Fby Fdist div Fr mul def /Fyt Fbx neg
+Fdist div Fr mul def } def
+
+/Fstraight 
+{/Fshape exch def /Ftype exch def /Fy2 exch
+def /Fx2 exch def /Fy1 exch def /Fx1 exch def
+Fx2 Fx1 sub Fy2 Fy1 sub Fbasis /Fttype 1
+Ftype 2 mod 2 mul abs sub def Ftype 0 ge
+{/Fddist Fdist Fr div 2 div def /Fn Fddist round
+def Ftype 1 gt {/Fn Fn Fddist Fn sub Fsign
+add def} if} {/Fn Fdist Fr div 2 div round 2
+mul def} ifelse Fx1 Fy1 moveto 0 1 Fnopoints
+Fn mul {/Fi exch def Fshape lineto } for
+stroke } def
+
+/Floop
+{/Fshape exch def /Fe exch def /Ftype exch
+def /Fy2 exch def /Fx2 exch def /Fy1 exch def
+/Fx1 exch def /Flam 1 Fe Fe mul sub 2 div Fe
+div def /Fxc Fx1 Fx2 Flam Fy2 Fy1 sub mul add
+add 2 div def /Fyc Fy1 Fy2 Flam Fx1 Fx2 sub
+mul add add 2 div def /Frr Fx1 Fxc sub dup
+mul Fy1 Fyc sub dup mul add sqrt def /Fth1
+Fy1 Fyc sub Fx1 Fxc sub atan def /Fth2 Fy2
+Fyc sub Fx2 Fxc sub atan def Fe 0 lt Fth2
+Fth1 lt and {/Fth1 Fth1 360 sub def} if Fe 0
+gt Fth2 Fth1 gt and {/Fth2 Fth2 360 sub def}
+if /Fdth Fth2 Fth1 sub Fsign def /Fttype 1
+Ftype 2 mod abs 2 mul sub def Ftype 0 ge
+{/Fddist Fth2 Fth1 sub abs 180 div pi mul Frr
+mul Fr div def /Fn Fddist round def Ftype 1
+gt {/Fn Fn Fddist Fn sub Fsign add def} if}
+{/Fn Fth2 Fth1 sub abs 180 div pi mul Frr mul
+Fr div 2 div round 2 mul def} ifelse Fx1 Fy1
+moveto 0 1 Fnopoints Fn mul {/Fi exch def
+/Fth Fth1 Fth2 Fth1 sub Fi mul Fnopoints div
+Fn div add Frmod def Fth sin neg Fdth mul Fth
+cos Fdth mul Fbasis Fshape lineto } for
+stroke } def
+
+/Farrow
+{ moveto Fxt Fxl sub Fyt Fyl sub
+rlineto Fxl 2 mul Fxt sub Fyl 2 mul Fyt sub
+rlineto Fxl 2 mul Fxt add neg Fyl 2 mul Fyt
+add neg rlineto fill } def
+
+/Fphoton
+{{ Fx1 Fx2 Fx1 sub Fi mul Fnopoints div Fn
+div Fxt Fi 360 mul Fnopoints div Frmod sin
+mul Fttype mul 2 div add add Fy1 Fy2 Fy1 sub
+Fi mul Fnopoints div Fn div Fyt Fi 360 mul
+Fnopoints div Frmod sin mul Fttype mul 2 div
+add add } Fstraight } def
+
+/Fphotonr
+{{ Fx1 Fx2 Fx1 sub Fi mul Fnopoints div Fn
+div Fxt Fi 180 mul Fnopoints div Frmod sin
+mul Fttype mul 1 div add add Fy1 Fy2 Fy1 sub
+Fi mul Fnopoints div Fn div Fyt Fi 180 mul
+Fnopoints div Frmod sin mul Fttype mul 1 div
+add add } Fstraight } def
+
+/Fphotond
+{{ Fx1 Fx2 Fx1 sub Fi mul Fnopoints div Fn
+div Fxt Fi 360 mul Fnopoints div Frmod sin
+mul Fttype mul 2 div add add Fy1 Fy2 Fy1 sub
+Fi mul Fnopoints div Fn div Fyt Fi 360 mul
+Fnopoints div Frmod sin mul Fttype mul 2 div
+add add } Fstraight Fx1
+Fx2 add 2 div Fy1 Fy2 add 2 div Farrow} def
+
+/Fphotonl
+{exch dup 3 1 roll 0 ge {{ Fxc Fth cos Frr
+mul Fxt Fi 180 mul Fnopoints div Frmod sin
+mul Fttype mul 2 div add add Fyc Fth sin Frr
+mul Fyt Fi 180 mul Fnopoints div Frmod sin
+mul Fttype mul 2 div add add }} {{ Fxc Fth
+cos Frr mul Fxt 1 Fi 180 mul Fnopoints div
+Frmod cos sub mul Fttype mul 2 div add add
+Fyc Fth sin Frr mul Fyt 1 Fi 180 mul
+Fnopoints div Frmod cos sub mul Fttype mul 2
+div add add }} ifelse Floop } def
+
+/Fgluon
+{2 sub { Fx1 Fx2 Fx1 sub Fi mul Fnopoints div
+Fn div Fxt 1 Fi 180 mul Fnopoints div cos sub
+mul Fttype mul Fxl Fi 180 mul Fnopoints div
+sin mul add add add Fy1 Fy2 Fy1 sub Fi mul
+Fnopoints div Fn div Fyt 1 Fi 180 mul
+Fnopoints div cos sub mul Fttype mul Fyl Fi
+180 mul Fnopoints div sin mul add add add }
+Fstraight } def
+
+/Fgluonr
+{2 sub { Fx1 Fx2 Fx1 sub Fi mul Fnopoints div
+Fn div Fxt 0 Fi 120 mul Fnopoints div cos sub
+mul Fttype mul Fxl Fi 120 mul Fnopoints div
+sin mul add add add Fy1 Fy2 Fy1 sub Fi mul
+Fnopoints div Fn div Fyt 0 Fi 120 mul
+Fnopoints div cos sub mul Fttype mul Fyl Fi
+120 mul Fnopoints div sin mul add add add }
+Fstraight } def
+
+
+/Fgluonl
+{exch 2 sub exch { Fxc Fth cos Frr mul Fxt 1
+Fi 180 mul Fnopoints div cos sub mul Fttype
+mul Fxl Fi 180 mul Fnopoints div sin mul add
+add add Fyc Fth sin Frr mul Fyt 1 Fi 180 mul
+Fnopoints div cos sub mul Fttype mul Fyl Fi
+180 mul Fnopoints div sin mul add add add }
+Floop} def
+
+/Ffermion
+{/Fy2 exch def /Fx2 exch def /Fy1 exch def
+/Fx1 exch def newpath Fx2 Fx1 sub Fy2 Fy1 sub
+Fbasis Fx1 Fy1 moveto Fx2 Fy2 lineto stroke Fx1
+Fx2 add 2 div Fy1 Fy2 add 2 div Farrow } def
+
+/Fscalar
+{newpath moveto lineto stroke} def
+
+/Ffermionl
+{/Fe exch def /Fy2 exch def /Fx2 exch def
+/Fy1 exch def /Fx1 exch def newpath /Flam 1 Fe
+Fe mul sub 2 div Fe div def /Fxc Fx1 Fx2 Flam Fy2
+Fy1 sub mul add add 2 div def /Fyc Fy1 Fy2
+Flam Fx1 Fx2 sub mul add add 2 div def /Frr
+Fx1 Fxc sub dup mul Fy1 Fyc sub dup mul add
+sqrt def /Fth1 Fy1 Fyc sub Fx1 Fxc sub atan
+def /Fth2 Fy2 Fyc sub Fx2 Fxc sub atan def Fe
+0 lt Fth2 Fth1 lt and {/Fth1 Fth1 360 sub
+def} if Fe 0 gt Fth2 Fth1 gt and {/Fth2 Fth2
+360 sub def} if /Fthc Fth1 Fth2 add 2 div def
+Fxc Fyc Frr Fth1 Fth2 Fe 0 gt {arcn} {arc}
+ifelse stroke Fthc sin Fe 0 lt {neg} if Fthc
+cos Fe 0 gt {neg} if Fbasis Fxc Fthc cos Frr
+mul add Fyc Fthc sin Frr mul add Farrow } def
+
+/Fscalarl
+{/Fe exch def /Fy2 exch def /Fx2 exch def
+/Fy1 exch def /Fx1 exch def newpath /Flam 1 Fe
+Fe mul sub 2 div Fe div def /Fxc Fx1 Fx2 Flam Fy2
+Fy1 sub mul add add 2 div def /Fyc Fy1 Fy2
+Flam Fx1 Fx2 sub mul add add 2 div def /Frr
+Fx1 Fxc sub dup mul Fy1 Fyc sub dup mul add
+sqrt def /Fth1 Fy1 Fyc sub Fx1 Fxc sub atan
+def /Fth2 Fy2 Fyc sub Fx2 Fxc sub atan def Fe
+0 lt Fth2 Fth1 lt and {/Fth1 Fth1 360 sub
+def} if Fe 0 gt Fth2 Fth1 gt and {/Fth2 Fth2
+360 sub def} if /Fthc Fth1 Fth2 add 2 div def
+Fxc Fyc Frr Fth1 Fth2 Fe 0 gt {arcn} {arc}
+ifelse stroke } def
+
+/Fblob 
+{/Fshade exch def newpath Fr mul 0 360 arc gsave
+1 Fshade sub setgray fill grestore stroke} def
+
+/Fhiggs
+{/Fy2 exch def /Fx2 exch def /Fy1 exch def
+/Fx1 exch def gsave Fx1 Fx2 sub dup mul
+Fy1 Fy2 sub dup mul add sqrt dup Fr div
+2 div round 2 mul 1 add div /dashln exch def
+[dashln dashln] 0 setdash Fx1 Fy1 moveto
+Fx2 Fy2 lineto stroke grestore} def
+
+
+/Fhiggsd
+{/Fy2 exch def /Fx2 exch def /Fy1 exch def
+/Fx1 exch def gsave Fx1 Fx2 sub dup mul
+Fy1 Fy2 sub dup mul add sqrt dup Fr div
+2 div round 2 mul 1 add div /dashln exch def
+[dashln dashln] 0 setdash Fx1 Fy1 moveto
+Fx2 Fy2 lineto stroke grestore Fx1 Fx2 add 2 div
+Fy1 Fy2 add 2 div Farrow} def
+
+/Fhiggsl
+{/Fe exch def /Fy2 exch def /Fx2 exch def
+/Fy1 exch def /Fx1 exch def /Flam gsave 1 Fe
+Fe mul sub 2 div Fe div def /Fxc Fx1 Fx2 Flam
+Fy2 Fy1 sub mul add add 2 div def /Fyc Fy1
+Fy2 Flam Fx1 Fx2 sub mul add add 2 div def
+/Frr Fx1 Fxc sub dup mul Fy1 Fyc sub dup mul
+add sqrt def /Fth1 Fy1 Fyc sub Fx1 Fxc sub
+atan def /Fth2 Fy2 Fyc sub Fx2 Fxc sub atan
+def Fe 0 lt Fth2 Fth1 lt and {/Fth1 Fth1 360
+sub def} if Fe 0 gt Fth2 Fth1 gt and {/Fth2
+Fth2 360 sub def} if /Fthc Fth1 Fth2 add 2
+div def Fxc Fyc Frr Fth1 Fth2 Fe 0 gt {arcn}
+{arc} ifelse Fth2 Fth1 sub abs 180 div pi mul
+Frr mul dup Fr div 2 div round 2 mul 1 add
+div /dashln exch def [dashln dashln] 0
+setdash stroke grestore} def
+
+/Fghost
+{/Fy2 exch def /Fx2 exch def /Fy1 exch def
+/Fx1 exch def Fx2 Fx1 sub Fy2 Fy1 sub Fbasis
+/Fn Fx1 Fx2 sub dup mul Fy1 Fy2 sub dup mul
+add sqrt Fr div round def 0 1 Fn {/Fi exch
+def Fx2 Fx1 sub Fi Fn div mul Fx1 add Fy2 Fy1
+sub Fi Fn div mul Fy1 add Fr 10 div 0 360 arc
+fill} for Fx1 Fx2 add 2 div Fy1 Fy2 add 2 div
+Farrow } def
+
+/Fghostl
+{/Fe exch def /Fy2 exch def /Fx2 exch def
+/Fy1 exch def /Fx1 exch def /Flam 1 Fe Fe mul
+sub 2 div Fe div def /Fxc Fx1 Fx2 Flam Fy2
+Fy1 sub mul add add 2 div def /Fyc Fy1 Fy2
+Flam Fx1 Fx2 sub mul add add 2 div def /Frr
+Fx1 Fxc sub dup mul Fy1 Fyc sub dup mul add
+sqrt def /Fth1 Fy1 Fyc sub Fx1 Fxc sub atan
+def /Fth2 Fy2 Fyc sub Fx2 Fxc sub atan def Fe
+0 lt Fth2 Fth1 lt and {/Fth1 Fth1 360 sub
+def} if Fe 0 gt Fth2 Fth1 gt and {/Fth2 Fth2
+360 sub def} if /Fthc Fth1 Fth2 add 2 div def
+/Fn Fth2 Fth1 sub abs 180 div pi mul Frr mul
+Fr div round def 0 1 Fn {/Fi exch def Fth2
+Fth1 sub Fi Fn div mul Fth1 add dup cos Frr
+mul Fxc add exch sin Frr mul Fyc add Fr 10
+div 0 360 arc fill} for Fthc sin Fe 0 lt
+{neg} if Fthc cos Fe 0 gt {neg} if Fbasis Fxc
+Fthc cos Frr mul add Fyc Fthc sin Frr mul add
+Farrow } def
+
+/Fproton
+{/Fy2 exch def /Fx2 exch def /Fy1 exch def
+/Fx1 exch def Fx2 Fx1 sub Fy2 Fy1 sub Fbasis
+Fx1 Fxt 2 div add Fy1 Fyt 2 div add moveto
+Fx2 Fxt 2 div add Fy2 Fyt 2 div add lineto
+Fx1 Fxt 2 div sub Fy1 Fyt 2 div sub moveto
+Fx2 Fxt 2 div sub Fy2 Fyt 2 div sub lineto
+Fx1 Fx2 add 2 div Fxt Fxl sub add Fy1 Fy2 add
+2 div Fyt Fyl sub add moveto Fx1 Fx2 add Fxl
+add 2 div Fy1 Fy2 add Fyl add 2 div lineto
+Fx1 Fx2 add 2 div Fxt Fxl add sub Fy1 Fy2 add
+2 div Fyt Fyl add sub lineto stroke} def
+
+/Fmax {2 copy lt {exch} if pop} def
+/Fstart {gsave currentpoint
+translate 0 0 moveto 0 rm Fr 4 mul
+scalefont setfont} def
+/Fsubspt {gsave currentpoint Fcharheight 5 div
+sub translate 0.6 0.6 scale 0 0 moveto 0} def
+/Fsupspt {gsave currentpoint Fcharheight 0.6 mul
+add translate 0.6 0.6 scale 0 0 moveto 0} def
+/Feend {currentpoint pop Fmax 0.6 mul
+grestore currentpoint pop add Fmax} def
+/Fendd {pop grestore} def
+/Fshow {exch 0 moveto show currentpoint pop} def
+/Fcharheight
+{gsave (X) true charpath flattenpath pathbbox
+3 1 roll pop sub exch pop grestore} def
+
+/Foverline
+{exch 0 moveto gsave dup true charpath
+flattenpath pathbbox Fcharheight 10 div dup
+2 div setlinewidth add dup 4
+1 roll newpath moveto pop lineto stroke
+grestore show currentpoint pop} def
+
+/Funderline 
+{exch 0 moveto gsave dup true charpath
+flattenpath pathbbox pop exch Fcharheight
+10 div dup 2 div setlinewidth
+sub dup 3 1 roll newpath moveto lineto stroke
+grestore show currentpoint pop} def
+
+/rm /Times-Roman findfont def
+/it /Times-Italic findfont def
+/sy /Symbol findfont def
+
+/wedge 
+/{ /ystop exch def /xstop exch def /ystart exch def
+/xstart exch def /delx xstop xstart sub def /dely 
+ystop ystart sub def /dist delx dup mul dely dup 
+mul add sqrt def /halfdist dist 2 div def
+/angle dely delx atan def xstart ystart moveto 
+angle rotate 0 halfdist rlineto dist halfdist
+neg rlineto dist neg halfdist neg rlineto 
+0 halfdist rlineto }def
+
+/ch_photon
+{/ystop exch def /xstop exch def /ystart exch def
+/xstart exch def /xmid xstart xstop add 2 div def
+/ymid ystart ystop add 2 div def
+/dx xstop xstart sub def /dy ystop ystart sub def
+/length dx dup mul dy dup mul add sqrt def
+/xunit dx length div def /yunit dy length div def
+/x1 xmid xunit -4.8 mul add def
+/y1 ymid yunit -4.8 mul add def
+/x2 xmid xunit 4.8 mul add def
+/y2 ymid yunit 4.8 mul add def
+/y2 ymid yunit 4.8 mul add def
+xstart ystart x1 y1 1 Fphoton 
+x2 y2 xstop ystop 1 Fphoton
+/x1 xmid xunit -5.2 mul add def 
+/y1 ymid yunit -5.2 mul add def
+/x2 xmid xunit 5.2 mul add def 
+/y2 ymid yunit 5.2 mul add def
+gsave x1 y1 x2 y2 wedge fill grestore} def
+
+/ch_higgs 
+{ /ystop exch def /xstop exch def /ystart exch def
+/xstart exch def 
+/xmid xstart xstop add 2 div def
+/ymid ystart ystop add 2 div def
+/dx xstop xstart sub def /dy ystop ystart sub def
+/length dx dup mul dy dup mul add sqrt def
+/xunit dx length div def /yunit dy length div def
+/x1 xmid xunit -4.8 mul add def 
+/y1 ymid yunit -4.8 mul add def
+/x2 xmid xunit 4.8 mul add def 
+/y2 ymid yunit 4.8 mul add def
+xstart ystart x1 y1 Fhiggs 
+x2 y2 xstop ystop Fhiggs
+/x1 xmid xunit -5.2 mul add def
+/y1 ymid yunit -5.2 mul add def
+/x2 xmid xunit 5.2 mul add def
+/y2 ymid yunit 5.2 mul add def
+gsave x1 y1 x2 y2 wedge fill grestore} def
+% End of the header
+
+%%Page:       1       1
+%%PageBoundingBox:-20 -20 600 800
+%%PageFonts: Helvetica
+
+/Helvetica findfont 9 scalefont setfont
+ 50         770  moveto
+ () show
+ 525         770  moveto
+ (page 1/7) show
+ 260         50  moveto
+ (Diagrams made by MadGraph5_aMC@NLO) show
+275.0 560 175.0 597.5 Ffermion 
+ 227.0  581.75 moveto 
+(ta+)   show
+ 283.0  557.0 moveto 
+(3)   show
+175.0 597.5 75 560 0 Fphoton 
+ 119.0  581.75 moveto 
+(a)   show
+ 67.0  560 moveto 
+(1)   show
+175.0 597.5 175.0 672.5 Ffermion 
+ 178.0  633.5 moveto 
+(ta-)   show
+175.0 672.5 275.0 710 Ffermion 
+ 207.0  700.25 moveto 
+(ta-)   show
+ 283.0  713.0 moveto 
+(4)   show
+75 710 175.0 672.5 0 Fphoton 
+ 127.0  694.25 moveto 
+(a)   show
+ 67.0  710 moveto 
+(2)   show
+ 115.0  534.5 moveto 
+( diagram 1 )   show
+ 195.0  534.5 moveto 
+ (NP=0, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 672.5 1.5 1.0 Fblob 
+550.0 560 450.0 597.5 Ffermion 
+ 502.0  581.75 moveto 
+(ta+)   show
+ 558.0  557.0 moveto 
+(3)   show
+450.0 597.5 350 560 0 Fphoton 
+ 394.0  581.75 moveto 
+(a)   show
+ 342.0  560 moveto 
+(1)   show
+450.0 597.5 450.0 672.5 Ffermion 
+ 453.0  633.5 moveto 
+(ta-)   show
+450.0 672.5 550.0 710 Ffermion 
+ 482.0  700.25 moveto 
+(ta-)   show
+ 558.0  713.0 moveto 
+(4)   show
+350 710 450.0 672.5 0 Fphoton 
+ 402.0  694.25 moveto 
+(a)   show
+ 342.0  710 moveto 
+(2)   show
+ 390.0  534.5 moveto 
+( diagram 2 )   show
+ 470.0  534.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 452.5 1.5 1.0 Fblob 
+275.0 340 175.0 377.5 Ffermion 
+ 227.0  361.75 moveto 
+(ta+)   show
+ 283.0  337.0 moveto 
+(3)   show
+175.0 377.5 75 340 0 Fphoton 
+ 119.0  361.75 moveto 
+(a)   show
+ 67.0  340 moveto 
+(1)   show
+175.0 377.5 175.0 452.5 Ffermion 
+ 178.0  413.5 moveto 
+(ta-)   show
+175.0 452.5 275.0 490 Ffermion 
+ 207.0  480.25 moveto 
+(ta-)   show
+ 283.0  493.0 moveto 
+(4)   show
+75 490 175.0 452.5 0 Fphoton 
+ 127.0  474.25 moveto 
+(a)   show
+ 67.0  490 moveto 
+(2)   show
+ 115.0  314.5 moveto 
+( diagram 3 )   show
+ 195.0  314.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 452.5 1.5 1.0 Fblob 
+550.0 340 450.0 377.5 Ffermion 
+ 502.0  361.75 moveto 
+(ta+)   show
+ 558.0  337.0 moveto 
+(3)   show
+450.0 377.5 350 340 0 Fphoton 
+ 394.0  361.75 moveto 
+(a)   show
+ 342.0  340 moveto 
+(1)   show
+450.0 377.5 450.0 452.5 Ffermion 
+ 453.0  413.5 moveto 
+(ta-)   show
+450.0 452.5 550.0 490 Ffermion 
+ 482.0  480.25 moveto 
+(ta-)   show
+ 558.0  493.0 moveto 
+(4)   show
+350 490 450.0 452.5 0 Fphoton 
+ 402.0  474.25 moveto 
+(a)   show
+ 342.0  490 moveto 
+(2)   show
+ 390.0  314.5 moveto 
+( diagram 4 )   show
+ 470.0  314.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 232.5 1.5 1.0 Fblob 
+275.0 120 175.0 157.5 Ffermion 
+ 227.0  141.75 moveto 
+(ta+)   show
+ 283.0  117.0 moveto 
+(3)   show
+175.0 157.5 75 120 0 Fphoton 
+ 119.0  141.75 moveto 
+(a)   show
+ 67.0  120 moveto 
+(1)   show
+175.0 157.5 175.0 232.5 Ffermion 
+ 178.0  193.5 moveto 
+(ta-)   show
+175.0 232.5 275.0 270 Ffermion 
+ 207.0  260.25 moveto 
+(ta-)   show
+ 283.0  273.0 moveto 
+(4)   show
+75 270 175.0 232.5 0 Fphoton 
+ 127.0  254.25 moveto 
+(a)   show
+ 67.0  270 moveto 
+(2)   show
+ 115.0  94.5 moveto 
+( diagram 5 )   show
+ 195.0  94.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 157.5 1.5 1.0 Fblob 
+550.0 120 450.0 157.5 Ffermion 
+ 502.0  141.75 moveto 
+(ta+)   show
+ 558.0  117.0 moveto 
+(3)   show
+450.0 157.5 350 120 0 Fphoton 
+ 394.0  141.75 moveto 
+(a)   show
+ 342.0  120 moveto 
+(1)   show
+450.0 157.5 450.0 232.5 Ffermion 
+ 453.0  193.5 moveto 
+(ta-)   show
+450.0 232.5 550.0 270 Ffermion 
+ 482.0  260.25 moveto 
+(ta-)   show
+ 558.0  273.0 moveto 
+(4)   show
+350 270 450.0 232.5 0 Fphoton 
+ 402.0  254.25 moveto 
+(a)   show
+ 342.0  270 moveto 
+(2)   show
+ 390.0  94.5 moveto 
+( diagram 6 )   show
+ 470.0  94.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+showpage
+%%Page: 2 2 
+%%PageBoundingBox:-20 -20 600 800
+%%PageFonts: Helvetica
+/Helvetica findfont 9 scalefont setfont
+ 50         770  moveto
+ () show
+ 525         770  moveto
+ (page 2/7) show
+ 260         40  moveto
+ (Diagrams made by MadGraph5_aMC@NLO) show
+ 175.0 597.5 1.5 1.0 Fblob 
+ 175.0 672.5 1.5 1.0 Fblob 
+275.0 560 175.0 597.5 Ffermion 
+ 227.0  581.75 moveto 
+(ta+)   show
+ 283.0  557.0 moveto 
+(3)   show
+175.0 597.5 75 560 0 Fphoton 
+ 119.0  581.75 moveto 
+(a)   show
+ 67.0  560 moveto 
+(1)   show
+175.0 597.5 175.0 672.5 Ffermion 
+ 178.0  633.5 moveto 
+(ta-)   show
+175.0 672.5 275.0 710 Ffermion 
+ 207.0  700.25 moveto 
+(ta-)   show
+ 283.0  713.0 moveto 
+(4)   show
+75 710 175.0 672.5 0 Fphoton 
+ 127.0  694.25 moveto 
+(a)   show
+ 67.0  710 moveto 
+(2)   show
+ 115.0  534.5 moveto 
+( diagram 7 )   show
+ 195.0  534.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=2, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 597.5 1.5 1.0 Fblob 
+ 450.0 672.5 1.5 1.0 Fblob 
+550.0 560 450.0 597.5 Ffermion 
+ 502.0  581.75 moveto 
+(ta+)   show
+ 558.0  557.0 moveto 
+(3)   show
+450.0 597.5 350 560 0 Fphoton 
+ 394.0  581.75 moveto 
+(a)   show
+ 342.0  560 moveto 
+(1)   show
+450.0 597.5 450.0 672.5 Ffermion 
+ 453.0  633.5 moveto 
+(ta-)   show
+450.0 672.5 550.0 710 Ffermion 
+ 482.0  700.25 moveto 
+(ta-)   show
+ 558.0  713.0 moveto 
+(4)   show
+350 710 450.0 672.5 0 Fphoton 
+ 402.0  694.25 moveto 
+(a)   show
+ 342.0  710 moveto 
+(2)   show
+ 390.0  534.5 moveto 
+( diagram 8 )   show
+ 470.0  534.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=2, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 377.5 1.5 1.0 Fblob 
+ 175.0 452.5 1.5 1.0 Fblob 
+275.0 340 175.0 377.5 Ffermion 
+ 227.0  361.75 moveto 
+(ta+)   show
+ 283.0  337.0 moveto 
+(3)   show
+175.0 377.5 75 340 0 Fphoton 
+ 119.0  361.75 moveto 
+(a)   show
+ 67.0  340 moveto 
+(1)   show
+175.0 377.5 175.0 452.5 Ffermion 
+ 178.0  413.5 moveto 
+(ta-)   show
+175.0 452.5 275.0 490 Ffermion 
+ 207.0  480.25 moveto 
+(ta-)   show
+ 283.0  493.0 moveto 
+(4)   show
+75 490 175.0 452.5 0 Fphoton 
+ 127.0  474.25 moveto 
+(a)   show
+ 67.0  490 moveto 
+(2)   show
+ 115.0  314.5 moveto 
+( diagram 9 )   show
+ 195.0  314.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 377.5 1.5 1.0 Fblob 
+ 450.0 452.5 1.5 1.0 Fblob 
+550.0 340 450.0 377.5 Ffermion 
+ 502.0  361.75 moveto 
+(ta+)   show
+ 558.0  337.0 moveto 
+(3)   show
+450.0 377.5 350 340 0 Fphoton 
+ 394.0  361.75 moveto 
+(a)   show
+ 342.0  340 moveto 
+(1)   show
+450.0 377.5 450.0 452.5 Ffermion 
+ 453.0  413.5 moveto 
+(ta-)   show
+450.0 452.5 550.0 490 Ffermion 
+ 482.0  480.25 moveto 
+(ta-)   show
+ 558.0  493.0 moveto 
+(4)   show
+350 490 450.0 452.5 0 Fphoton 
+ 402.0  474.25 moveto 
+(a)   show
+ 342.0  490 moveto 
+(2)   show
+ 390.0  314.5 moveto 
+( diagram 10 )   show
+ 470.0  314.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 157.5 1.5 1.0 Fblob 
+275.0 120 175.0 157.5 Ffermion 
+ 227.0  141.75 moveto 
+(ta+)   show
+ 283.0  117.0 moveto 
+(3)   show
+175.0 157.5 75 120 0 Fphoton 
+ 119.0  141.75 moveto 
+(a)   show
+ 67.0  120 moveto 
+(1)   show
+175.0 157.5 175.0 232.5 Ffermion 
+ 178.0  193.5 moveto 
+(ta-)   show
+175.0 232.5 275.0 270 Ffermion 
+ 207.0  260.25 moveto 
+(ta-)   show
+ 283.0  273.0 moveto 
+(4)   show
+75 270 175.0 232.5 0 Fphoton 
+ 127.0  254.25 moveto 
+(a)   show
+ 67.0  270 moveto 
+(2)   show
+ 115.0  94.5 moveto 
+( diagram 11 )   show
+ 195.0  94.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 157.5 1.5 1.0 Fblob 
+ 450.0 232.5 1.5 1.0 Fblob 
+550.0 120 450.0 157.5 Ffermion 
+ 502.0  141.75 moveto 
+(ta+)   show
+ 558.0  117.0 moveto 
+(3)   show
+450.0 157.5 350 120 0 Fphoton 
+ 394.0  141.75 moveto 
+(a)   show
+ 342.0  120 moveto 
+(1)   show
+450.0 157.5 450.0 232.5 Ffermion 
+ 453.0  193.5 moveto 
+(ta-)   show
+450.0 232.5 550.0 270 Ffermion 
+ 482.0  260.25 moveto 
+(ta-)   show
+ 558.0  273.0 moveto 
+(4)   show
+350 270 450.0 232.5 0 Fphoton 
+ 402.0  254.25 moveto 
+(a)   show
+ 342.0  270 moveto 
+(2)   show
+ 390.0  94.5 moveto 
+( diagram 12 )   show
+ 470.0  94.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=2, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+showpage
+%%Page: 3 3 
+%%PageBoundingBox:-20 -20 600 800
+%%PageFonts: Helvetica
+/Helvetica findfont 9 scalefont setfont
+ 50         770  moveto
+ () show
+ 525         770  moveto
+ (page 3/7) show
+ 260         40  moveto
+ (Diagrams made by MadGraph5_aMC@NLO) show
+ 175.0 597.5 1.5 1.0 Fblob 
+ 175.0 672.5 1.5 1.0 Fblob 
+275.0 560 175.0 597.5 Ffermion 
+ 227.0  581.75 moveto 
+(ta+)   show
+ 283.0  557.0 moveto 
+(3)   show
+175.0 597.5 75 560 0 Fphoton 
+ 119.0  581.75 moveto 
+(a)   show
+ 67.0  560 moveto 
+(1)   show
+175.0 597.5 175.0 672.5 Ffermion 
+ 178.0  633.5 moveto 
+(ta-)   show
+175.0 672.5 275.0 710 Ffermion 
+ 207.0  700.25 moveto 
+(ta-)   show
+ 283.0  713.0 moveto 
+(4)   show
+75 710 175.0 672.5 0 Fphoton 
+ 127.0  694.25 moveto 
+(a)   show
+ 67.0  710 moveto 
+(2)   show
+ 115.0  534.5 moveto 
+( diagram 13 )   show
+ 195.0  534.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=2, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=2, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 597.5 1.5 1.0 Fblob 
+ 450.0 672.5 1.5 1.0 Fblob 
+550.0 560 450.0 597.5 Ffermion 
+ 502.0  581.75 moveto 
+(ta+)   show
+ 558.0  557.0 moveto 
+(3)   show
+450.0 597.5 350 560 0 Fphoton 
+ 394.0  581.75 moveto 
+(a)   show
+ 342.0  560 moveto 
+(1)   show
+450.0 597.5 450.0 672.5 Ffermion 
+ 453.0  633.5 moveto 
+(ta-)   show
+450.0 672.5 550.0 710 Ffermion 
+ 482.0  700.25 moveto 
+(ta-)   show
+ 558.0  713.0 moveto 
+(4)   show
+350 710 450.0 672.5 0 Fphoton 
+ 402.0  694.25 moveto 
+(a)   show
+ 342.0  710 moveto 
+(2)   show
+ 390.0  534.5 moveto 
+( diagram 14 )   show
+ 470.0  534.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 377.5 1.5 1.0 Fblob 
+ 175.0 452.5 1.5 1.0 Fblob 
+275.0 340 175.0 377.5 Ffermion 
+ 227.0  361.75 moveto 
+(ta+)   show
+ 283.0  337.0 moveto 
+(3)   show
+175.0 377.5 75 340 0 Fphoton 
+ 119.0  361.75 moveto 
+(a)   show
+ 67.0  340 moveto 
+(1)   show
+175.0 377.5 175.0 452.5 Ffermion 
+ 178.0  413.5 moveto 
+(ta-)   show
+175.0 452.5 275.0 490 Ffermion 
+ 207.0  480.25 moveto 
+(ta-)   show
+ 283.0  493.0 moveto 
+(4)   show
+75 490 175.0 452.5 0 Fphoton 
+ 127.0  474.25 moveto 
+(a)   show
+ 67.0  490 moveto 
+(2)   show
+ 115.0  314.5 moveto 
+( diagram 15 )   show
+ 195.0  314.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=2, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 377.5 1.5 1.0 Fblob 
+550.0 340 450.0 377.5 Ffermion 
+ 502.0  361.75 moveto 
+(ta+)   show
+ 558.0  337.0 moveto 
+(3)   show
+450.0 377.5 350 340 0 Fphoton 
+ 394.0  361.75 moveto 
+(a)   show
+ 342.0  340 moveto 
+(1)   show
+450.0 377.5 450.0 452.5 Ffermion 
+ 453.0  413.5 moveto 
+(ta-)   show
+450.0 452.5 550.0 490 Ffermion 
+ 482.0  480.25 moveto 
+(ta-)   show
+ 558.0  493.0 moveto 
+(4)   show
+350 490 450.0 452.5 0 Fphoton 
+ 402.0  474.25 moveto 
+(a)   show
+ 342.0  490 moveto 
+(2)   show
+ 390.0  314.5 moveto 
+( diagram 16 )   show
+ 470.0  314.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 157.5 1.5 1.0 Fblob 
+ 175.0 232.5 1.5 1.0 Fblob 
+275.0 120 175.0 157.5 Ffermion 
+ 227.0  141.75 moveto 
+(ta+)   show
+ 283.0  117.0 moveto 
+(3)   show
+175.0 157.5 75 120 0 Fphoton 
+ 119.0  141.75 moveto 
+(a)   show
+ 67.0  120 moveto 
+(1)   show
+175.0 157.5 175.0 232.5 Ffermion 
+ 178.0  193.5 moveto 
+(ta-)   show
+175.0 232.5 275.0 270 Ffermion 
+ 207.0  260.25 moveto 
+(ta-)   show
+ 283.0  273.0 moveto 
+(4)   show
+75 270 175.0 232.5 0 Fphoton 
+ 127.0  254.25 moveto 
+(a)   show
+ 67.0  270 moveto 
+(2)   show
+ 115.0  94.5 moveto 
+( diagram 17 )   show
+ 195.0  94.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 157.5 1.5 1.0 Fblob 
+ 450.0 232.5 1.5 1.0 Fblob 
+550.0 120 450.0 157.5 Ffermion 
+ 502.0  141.75 moveto 
+(ta+)   show
+ 558.0  117.0 moveto 
+(3)   show
+450.0 157.5 350 120 0 Fphoton 
+ 394.0  141.75 moveto 
+(a)   show
+ 342.0  120 moveto 
+(1)   show
+450.0 157.5 450.0 232.5 Ffermion 
+ 453.0  193.5 moveto 
+(ta-)   show
+450.0 232.5 550.0 270 Ffermion 
+ 482.0  260.25 moveto 
+(ta-)   show
+ 558.0  273.0 moveto 
+(4)   show
+350 270 450.0 232.5 0 Fphoton 
+ 402.0  254.25 moveto 
+(a)   show
+ 342.0  270 moveto 
+(2)   show
+ 390.0  94.5 moveto 
+( diagram 18 )   show
+ 470.0  94.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+showpage
+%%Page: 4 4 
+%%PageBoundingBox:-20 -20 600 800
+%%PageFonts: Helvetica
+/Helvetica findfont 9 scalefont setfont
+ 50         770  moveto
+ () show
+ 525         770  moveto
+ (page 4/7) show
+ 260         40  moveto
+ (Diagrams made by MadGraph5_aMC@NLO) show
+ 175.0 597.5 1.5 1.0 Fblob 
+ 175.0 672.5 1.5 1.0 Fblob 
+275.0 560 175.0 597.5 Ffermion 
+ 227.0  581.75 moveto 
+(ta+)   show
+ 283.0  557.0 moveto 
+(3)   show
+175.0 597.5 75 560 0 Fphoton 
+ 119.0  581.75 moveto 
+(a)   show
+ 67.0  560 moveto 
+(1)   show
+175.0 597.5 175.0 672.5 Ffermion 
+ 178.0  633.5 moveto 
+(ta-)   show
+175.0 672.5 275.0 710 Ffermion 
+ 207.0  700.25 moveto 
+(ta-)   show
+ 283.0  713.0 moveto 
+(4)   show
+75 710 175.0 672.5 0 Fphoton 
+ 127.0  694.25 moveto 
+(a)   show
+ 67.0  710 moveto 
+(2)   show
+ 115.0  534.5 moveto 
+( diagram 19 )   show
+ 195.0  534.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=2, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 597.5 1.5 1.0 Fblob 
+ 450.0 672.5 1.5 1.0 Fblob 
+550.0 560 450.0 597.5 Ffermion 
+ 502.0  581.75 moveto 
+(ta+)   show
+ 558.0  557.0 moveto 
+(3)   show
+450.0 597.5 350 560 0 Fphoton 
+ 394.0  581.75 moveto 
+(a)   show
+ 342.0  560 moveto 
+(1)   show
+450.0 597.5 450.0 672.5 Ffermion 
+ 453.0  633.5 moveto 
+(ta-)   show
+450.0 672.5 550.0 710 Ffermion 
+ 482.0  700.25 moveto 
+(ta-)   show
+ 558.0  713.0 moveto 
+(4)   show
+350 710 450.0 672.5 0 Fphoton 
+ 402.0  694.25 moveto 
+(a)   show
+ 342.0  710 moveto 
+(2)   show
+ 390.0  534.5 moveto 
+( diagram 20 )   show
+ 470.0  534.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=2, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 377.5 1.5 1.0 Fblob 
+275.0 340 175.0 377.5 Ffermion 
+ 227.0  361.75 moveto 
+(ta+)   show
+ 283.0  337.0 moveto 
+(3)   show
+175.0 377.5 75 340 0 Fphoton 
+ 119.0  361.75 moveto 
+(a)   show
+ 67.0  340 moveto 
+(1)   show
+175.0 377.5 175.0 452.5 Ffermion 
+ 178.0  413.5 moveto 
+(ta-)   show
+175.0 452.5 275.0 490 Ffermion 
+ 207.0  480.25 moveto 
+(ta-)   show
+ 283.0  493.0 moveto 
+(4)   show
+75 490 175.0 452.5 0 Fphoton 
+ 127.0  474.25 moveto 
+(a)   show
+ 67.0  490 moveto 
+(2)   show
+ 115.0  314.5 moveto 
+( diagram 21 )   show
+ 195.0  314.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 377.5 1.5 1.0 Fblob 
+ 450.0 452.5 1.5 1.0 Fblob 
+550.0 340 450.0 377.5 Ffermion 
+ 502.0  361.75 moveto 
+(ta+)   show
+ 558.0  337.0 moveto 
+(3)   show
+450.0 377.5 350 340 0 Fphoton 
+ 394.0  361.75 moveto 
+(a)   show
+ 342.0  340 moveto 
+(1)   show
+450.0 377.5 450.0 452.5 Ffermion 
+ 453.0  413.5 moveto 
+(ta-)   show
+450.0 452.5 550.0 490 Ffermion 
+ 482.0  480.25 moveto 
+(ta-)   show
+ 558.0  493.0 moveto 
+(4)   show
+350 490 450.0 452.5 0 Fphoton 
+ 402.0  474.25 moveto 
+(a)   show
+ 342.0  490 moveto 
+(2)   show
+ 390.0  314.5 moveto 
+( diagram 22 )   show
+ 470.0  314.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 157.5 1.5 1.0 Fblob 
+ 175.0 232.5 1.5 1.0 Fblob 
+275.0 120 175.0 157.5 Ffermion 
+ 227.0  141.75 moveto 
+(ta+)   show
+ 283.0  117.0 moveto 
+(3)   show
+175.0 157.5 75 120 0 Fphoton 
+ 119.0  141.75 moveto 
+(a)   show
+ 67.0  120 moveto 
+(1)   show
+175.0 157.5 175.0 232.5 Ffermion 
+ 178.0  193.5 moveto 
+(ta-)   show
+175.0 232.5 275.0 270 Ffermion 
+ 207.0  260.25 moveto 
+(ta-)   show
+ 283.0  273.0 moveto 
+(4)   show
+75 270 175.0 232.5 0 Fphoton 
+ 127.0  254.25 moveto 
+(a)   show
+ 67.0  270 moveto 
+(2)   show
+ 115.0  94.5 moveto 
+( diagram 23 )   show
+ 195.0  94.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=2, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 157.5 1.5 1.0 Fblob 
+ 450.0 232.5 1.5 1.0 Fblob 
+550.0 120 450.0 157.5 Ffermion 
+ 502.0  141.75 moveto 
+(ta+)   show
+ 558.0  117.0 moveto 
+(3)   show
+450.0 157.5 350 120 0 Fphoton 
+ 394.0  141.75 moveto 
+(a)   show
+ 342.0  120 moveto 
+(1)   show
+450.0 157.5 450.0 232.5 Ffermion 
+ 453.0  193.5 moveto 
+(ta-)   show
+450.0 232.5 550.0 270 Ffermion 
+ 482.0  260.25 moveto 
+(ta-)   show
+ 558.0  273.0 moveto 
+(4)   show
+350 270 450.0 232.5 0 Fphoton 
+ 402.0  254.25 moveto 
+(a)   show
+ 342.0  270 moveto 
+(2)   show
+ 390.0  94.5 moveto 
+( diagram 24 )   show
+ 470.0  94.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=2, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+showpage
+%%Page: 5 5 
+%%PageBoundingBox:-20 -20 600 800
+%%PageFonts: Helvetica
+/Helvetica findfont 9 scalefont setfont
+ 50         770  moveto
+ () show
+ 525         770  moveto
+ (page 5/7) show
+ 260         40  moveto
+ (Diagrams made by MadGraph5_aMC@NLO) show
+ 175.0 597.5 1.5 1.0 Fblob 
+ 175.0 672.5 1.5 1.0 Fblob 
+275.0 560 175.0 597.5 Ffermion 
+ 227.0  581.75 moveto 
+(ta+)   show
+ 283.0  557.0 moveto 
+(3)   show
+175.0 597.5 75 560 0 Fphoton 
+ 119.0  581.75 moveto 
+(a)   show
+ 67.0  560 moveto 
+(1)   show
+175.0 597.5 175.0 672.5 Ffermion 
+ 178.0  633.5 moveto 
+(ta-)   show
+175.0 672.5 275.0 710 Ffermion 
+ 207.0  700.25 moveto 
+(ta-)   show
+ 283.0  713.0 moveto 
+(4)   show
+75 710 175.0 672.5 0 Fphoton 
+ 127.0  694.25 moveto 
+(a)   show
+ 67.0  710 moveto 
+(2)   show
+ 115.0  534.5 moveto 
+( diagram 25 )   show
+ 195.0  534.5 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=2, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=2, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+450.0 597.5 550.0 560 Ffermion 
+ 502.0  581.75 moveto 
+(ta-)   show
+ 558.0  557.0 moveto 
+(4)   show
+450.0 597.5 350 560 0 Fphoton 
+ 394.0  581.75 moveto 
+(a)   show
+ 342.0  560 moveto 
+(1)   show
+450.0 672.5 450.0 597.5 Ffermion 
+ 453.0  633.5 moveto 
+(ta+)   show
+550.0 710 450.0 672.5 Ffermion 
+ 482.0  700.25 moveto 
+(ta+)   show
+ 558.0  713.0 moveto 
+(3)   show
+350 710 450.0 672.5 0 Fphoton 
+ 402.0  694.25 moveto 
+(a)   show
+ 342.0  710 moveto 
+(2)   show
+ 390.0  534.5 moveto 
+( diagram 26 )   show
+ 470.0  534.5 moveto 
+ (NP=0, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 452.5 1.5 1.0 Fblob 
+175.0 377.5 275.0 340 Ffermion 
+ 227.0  361.75 moveto 
+(ta-)   show
+ 283.0  337.0 moveto 
+(4)   show
+175.0 377.5 75 340 0 Fphoton 
+ 119.0  361.75 moveto 
+(a)   show
+ 67.0  340 moveto 
+(1)   show
+175.0 452.5 175.0 377.5 Ffermion 
+ 178.0  413.5 moveto 
+(ta+)   show
+275.0 490 175.0 452.5 Ffermion 
+ 207.0  480.25 moveto 
+(ta+)   show
+ 283.0  493.0 moveto 
+(3)   show
+75 490 175.0 452.5 0 Fphoton 
+ 127.0  474.25 moveto 
+(a)   show
+ 67.0  490 moveto 
+(2)   show
+ 115.0  314.5 moveto 
+( diagram 27 )   show
+ 195.0  314.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 452.5 1.5 1.0 Fblob 
+450.0 377.5 550.0 340 Ffermion 
+ 502.0  361.75 moveto 
+(ta-)   show
+ 558.0  337.0 moveto 
+(4)   show
+450.0 377.5 350 340 0 Fphoton 
+ 394.0  361.75 moveto 
+(a)   show
+ 342.0  340 moveto 
+(1)   show
+450.0 452.5 450.0 377.5 Ffermion 
+ 453.0  413.5 moveto 
+(ta+)   show
+550.0 490 450.0 452.5 Ffermion 
+ 482.0  480.25 moveto 
+(ta+)   show
+ 558.0  493.0 moveto 
+(3)   show
+350 490 450.0 452.5 0 Fphoton 
+ 402.0  474.25 moveto 
+(a)   show
+ 342.0  490 moveto 
+(2)   show
+ 390.0  314.5 moveto 
+( diagram 28 )   show
+ 470.0  314.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 175.0 232.5 1.5 1.0 Fblob 
+175.0 157.5 275.0 120 Ffermion 
+ 227.0  141.75 moveto 
+(ta-)   show
+ 283.0  117.0 moveto 
+(4)   show
+175.0 157.5 75 120 0 Fphoton 
+ 119.0  141.75 moveto 
+(a)   show
+ 67.0  120 moveto 
+(1)   show
+175.0 232.5 175.0 157.5 Ffermion 
+ 178.0  193.5 moveto 
+(ta+)   show
+275.0 270 175.0 232.5 Ffermion 
+ 207.0  260.25 moveto 
+(ta+)   show
+ 283.0  273.0 moveto 
+(3)   show
+75 270 175.0 232.5 0 Fphoton 
+ 127.0  254.25 moveto 
+(a)   show
+ 67.0  270 moveto 
+(2)   show
+ 115.0  94.5 moveto 
+( diagram 29 )   show
+ 195.0  94.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 450.0 232.5 1.5 1.0 Fblob 
+450.0 157.5 550.0 120 Ffermion 
+ 502.0  141.75 moveto 
+(ta-)   show
+ 558.0  117.0 moveto 
+(4)   show
+450.0 157.5 350 120 0 Fphoton 
+ 394.0  141.75 moveto 
+(a)   show
+ 342.0  120 moveto 
+(1)   show
+450.0 232.5 450.0 157.5 Ffermion 
+ 453.0  193.5 moveto 
+(ta+)   show
+550.0 270 450.0 232.5 Ffermion 
+ 482.0  260.25 moveto 
+(ta+)   show
+ 558.0  273.0 moveto 
+(3)   show
+350 270 450.0 232.5 0 Fphoton 
+ 402.0  254.25 moveto 
+(a)   show
+ 342.0  270 moveto 
+(2)   show
+ 390.0  94.5 moveto 
+( diagram 30 )   show
+ 470.0  94.5 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+showpage
+%%Page: 6 6 
+%%PageBoundingBox:-20 -20 600 800
+%%PageFonts: Helvetica
+/Helvetica findfont 6 scalefont setfont
+ 50         770  moveto
+ () show
+ 525         770  moveto
+ (page 6/7) show
+ 260         40  moveto
+ (Diagrams made by MadGraph5_aMC@NLO) show
+ 115.0 645.0 0.9 1.0 Fblob 
+115.0 645.0 190.0 620 Ffermion 
+ 154.0  634.5 moveto 
+(ta-)   show
+ 196.0  618.0 moveto 
+(4)   show
+115.0 645.0 40 620 0 Fphoton 
+ 73.0  634.5 moveto 
+(a)   show
+ 34.0  620 moveto 
+(1)   show
+115.0 695.0 115.0 645.0 Ffermion 
+ 117.25  669.0 moveto 
+(ta+)   show
+190.0 720 115.0 695.0 Ffermion 
+ 139.0  713.5 moveto 
+(ta+)   show
+ 196.0  722.0 moveto 
+(3)   show
+40 720 115.0 695.0 0 Fphoton 
+ 79.0  709.5 moveto 
+(a)   show
+ 34.0  720 moveto 
+(2)   show
+ 70.0  603.0 moveto 
+( diagram 31 )   show
+ 130.0  603.0 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 307.0 645.0 0.9 1.0 Fblob 
+ 307.0 695.0 0.9 1.0 Fblob 
+307.0 645.0 382.0 620 Ffermion 
+ 346.0  634.5 moveto 
+(ta-)   show
+ 388.0  618.0 moveto 
+(4)   show
+307.0 645.0 232 620 0 Fphoton 
+ 265.0  634.5 moveto 
+(a)   show
+ 226.0  620 moveto 
+(1)   show
+307.0 695.0 307.0 645.0 Ffermion 
+ 309.25  669.0 moveto 
+(ta+)   show
+382.0 720 307.0 695.0 Ffermion 
+ 331.0  713.5 moveto 
+(ta+)   show
+ 388.0  722.0 moveto 
+(3)   show
+232 720 307.0 695.0 0 Fphoton 
+ 271.0  709.5 moveto 
+(a)   show
+ 226.0  720 moveto 
+(2)   show
+ 262.0  603.0 moveto 
+( diagram 32 )   show
+ 322.0  603.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=2, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 499.0 645.0 0.9 1.0 Fblob 
+ 499.0 695.0 0.9 1.0 Fblob 
+499.0 645.0 574.0 620 Ffermion 
+ 538.0  634.5 moveto 
+(ta-)   show
+ 580.0  618.0 moveto 
+(4)   show
+499.0 645.0 424 620 0 Fphoton 
+ 457.0  634.5 moveto 
+(a)   show
+ 418.0  620 moveto 
+(1)   show
+499.0 695.0 499.0 645.0 Ffermion 
+ 501.25  669.0 moveto 
+(ta+)   show
+574.0 720 499.0 695.0 Ffermion 
+ 523.0  713.5 moveto 
+(ta+)   show
+ 580.0  722.0 moveto 
+(3)   show
+424 720 499.0 695.0 0 Fphoton 
+ 463.0  709.5 moveto 
+(a)   show
+ 418.0  720 moveto 
+(2)   show
+ 454.0  603.0 moveto 
+( diagram 33 )   show
+ 514.0  603.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=2, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 115.0 515.0 0.9 1.0 Fblob 
+ 115.0 565.0 0.9 1.0 Fblob 
+115.0 515.0 190.0 490 Ffermion 
+ 154.0  504.5 moveto 
+(ta-)   show
+ 196.0  488.0 moveto 
+(4)   show
+115.0 515.0 40 490 0 Fphoton 
+ 73.0  504.5 moveto 
+(a)   show
+ 34.0  490 moveto 
+(1)   show
+115.0 565.0 115.0 515.0 Ffermion 
+ 117.25  539.0 moveto 
+(ta+)   show
+190.0 590 115.0 565.0 Ffermion 
+ 139.0  583.5 moveto 
+(ta+)   show
+ 196.0  592.0 moveto 
+(3)   show
+40 590 115.0 565.0 0 Fphoton 
+ 79.0  579.5 moveto 
+(a)   show
+ 34.0  590 moveto 
+(2)   show
+ 70.0  473.0 moveto 
+( diagram 34 )   show
+ 130.0  473.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 307.0 515.0 0.9 1.0 Fblob 
+ 307.0 565.0 0.9 1.0 Fblob 
+307.0 515.0 382.0 490 Ffermion 
+ 346.0  504.5 moveto 
+(ta-)   show
+ 388.0  488.0 moveto 
+(4)   show
+307.0 515.0 232 490 0 Fphoton 
+ 265.0  504.5 moveto 
+(a)   show
+ 226.0  490 moveto 
+(1)   show
+307.0 565.0 307.0 515.0 Ffermion 
+ 309.25  539.0 moveto 
+(ta+)   show
+382.0 590 307.0 565.0 Ffermion 
+ 331.0  583.5 moveto 
+(ta+)   show
+ 388.0  592.0 moveto 
+(3)   show
+232 590 307.0 565.0 0 Fphoton 
+ 271.0  579.5 moveto 
+(a)   show
+ 226.0  590 moveto 
+(2)   show
+ 262.0  473.0 moveto 
+( diagram 35 )   show
+ 322.0  473.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 499.0 515.0 0.9 1.0 Fblob 
+499.0 515.0 574.0 490 Ffermion 
+ 538.0  504.5 moveto 
+(ta-)   show
+ 580.0  488.0 moveto 
+(4)   show
+499.0 515.0 424 490 0 Fphoton 
+ 457.0  504.5 moveto 
+(a)   show
+ 418.0  490 moveto 
+(1)   show
+499.0 565.0 499.0 515.0 Ffermion 
+ 501.25  539.0 moveto 
+(ta+)   show
+574.0 590 499.0 565.0 Ffermion 
+ 523.0  583.5 moveto 
+(ta+)   show
+ 580.0  592.0 moveto 
+(3)   show
+424 590 499.0 565.0 0 Fphoton 
+ 463.0  579.5 moveto 
+(a)   show
+ 418.0  590 moveto 
+(2)   show
+ 454.0  473.0 moveto 
+( diagram 36 )   show
+ 514.0  473.0 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 115.0 385.0 0.9 1.0 Fblob 
+ 115.0 435.0 0.9 1.0 Fblob 
+115.0 385.0 190.0 360 Ffermion 
+ 154.0  374.5 moveto 
+(ta-)   show
+ 196.0  358.0 moveto 
+(4)   show
+115.0 385.0 40 360 0 Fphoton 
+ 73.0  374.5 moveto 
+(a)   show
+ 34.0  360 moveto 
+(1)   show
+115.0 435.0 115.0 385.0 Ffermion 
+ 117.25  409.0 moveto 
+(ta+)   show
+190.0 460 115.0 435.0 Ffermion 
+ 139.0  453.5 moveto 
+(ta+)   show
+ 196.0  462.0 moveto 
+(3)   show
+40 460 115.0 435.0 0 Fphoton 
+ 79.0  449.5 moveto 
+(a)   show
+ 34.0  460 moveto 
+(2)   show
+ 70.0  343.0 moveto 
+( diagram 37 )   show
+ 130.0  343.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=2, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 307.0 385.0 0.9 1.0 Fblob 
+ 307.0 435.0 0.9 1.0 Fblob 
+307.0 385.0 382.0 360 Ffermion 
+ 346.0  374.5 moveto 
+(ta-)   show
+ 388.0  358.0 moveto 
+(4)   show
+307.0 385.0 232 360 0 Fphoton 
+ 265.0  374.5 moveto 
+(a)   show
+ 226.0  360 moveto 
+(1)   show
+307.0 435.0 307.0 385.0 Ffermion 
+ 309.25  409.0 moveto 
+(ta+)   show
+382.0 460 307.0 435.0 Ffermion 
+ 331.0  453.5 moveto 
+(ta+)   show
+ 388.0  462.0 moveto 
+(3)   show
+232 460 307.0 435.0 0 Fphoton 
+ 271.0  449.5 moveto 
+(a)   show
+ 226.0  460 moveto 
+(2)   show
+ 262.0  343.0 moveto 
+( diagram 38 )   show
+ 322.0  343.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=2, NPceH=0, NPceW=0, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=2, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 499.0 385.0 0.9 1.0 Fblob 
+ 499.0 435.0 0.9 1.0 Fblob 
+499.0 385.0 574.0 360 Ffermion 
+ 538.0  374.5 moveto 
+(ta-)   show
+ 580.0  358.0 moveto 
+(4)   show
+499.0 385.0 424 360 0 Fphoton 
+ 457.0  374.5 moveto 
+(a)   show
+ 418.0  360 moveto 
+(1)   show
+499.0 435.0 499.0 385.0 Ffermion 
+ 501.25  409.0 moveto 
+(ta+)   show
+574.0 460 499.0 435.0 Ffermion 
+ 523.0  453.5 moveto 
+(ta+)   show
+ 580.0  462.0 moveto 
+(3)   show
+424 460 499.0 435.0 0 Fphoton 
+ 463.0  449.5 moveto 
+(a)   show
+ 418.0  460 moveto 
+(2)   show
+ 454.0  343.0 moveto 
+( diagram 39 )   show
+ 514.0  343.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 115.0 255.0 0.9 1.0 Fblob 
+ 115.0 305.0 0.9 1.0 Fblob 
+115.0 255.0 190.0 230 Ffermion 
+ 154.0  244.5 moveto 
+(ta-)   show
+ 196.0  228.0 moveto 
+(4)   show
+115.0 255.0 40 230 0 Fphoton 
+ 73.0  244.5 moveto 
+(a)   show
+ 34.0  230 moveto 
+(1)   show
+115.0 305.0 115.0 255.0 Ffermion 
+ 117.25  279.0 moveto 
+(ta+)   show
+190.0 330 115.0 305.0 Ffermion 
+ 139.0  323.5 moveto 
+(ta+)   show
+ 196.0  332.0 moveto 
+(3)   show
+40 330 115.0 305.0 0 Fphoton 
+ 79.0  319.5 moveto 
+(a)   show
+ 34.0  330 moveto 
+(2)   show
+ 70.0  213.0 moveto 
+( diagram 40 )   show
+ 130.0  213.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=2, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 307.0 255.0 0.9 1.0 Fblob 
+307.0 255.0 382.0 230 Ffermion 
+ 346.0  244.5 moveto 
+(ta-)   show
+ 388.0  228.0 moveto 
+(4)   show
+307.0 255.0 232 230 0 Fphoton 
+ 265.0  244.5 moveto 
+(a)   show
+ 226.0  230 moveto 
+(1)   show
+307.0 305.0 307.0 255.0 Ffermion 
+ 309.25  279.0 moveto 
+(ta+)   show
+382.0 330 307.0 305.0 Ffermion 
+ 331.0  323.5 moveto 
+(ta+)   show
+ 388.0  332.0 moveto 
+(3)   show
+232 330 307.0 305.0 0 Fphoton 
+ 271.0  319.5 moveto 
+(a)   show
+ 226.0  330 moveto 
+(2)   show
+ 262.0  213.0 moveto 
+( diagram 41 )   show
+ 322.0  213.0 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 499.0 255.0 0.9 1.0 Fblob 
+ 499.0 305.0 0.9 1.0 Fblob 
+499.0 255.0 574.0 230 Ffermion 
+ 538.0  244.5 moveto 
+(ta-)   show
+ 580.0  228.0 moveto 
+(4)   show
+499.0 255.0 424 230 0 Fphoton 
+ 457.0  244.5 moveto 
+(a)   show
+ 418.0  230 moveto 
+(1)   show
+499.0 305.0 499.0 255.0 Ffermion 
+ 501.25  279.0 moveto 
+(ta+)   show
+574.0 330 499.0 305.0 Ffermion 
+ 523.0  323.5 moveto 
+(ta+)   show
+ 580.0  332.0 moveto 
+(3)   show
+424 330 499.0 305.0 0 Fphoton 
+ 463.0  319.5 moveto 
+(a)   show
+ 418.0  330 moveto 
+(2)   show
+ 454.0  213.0 moveto 
+( diagram 42 )   show
+ 514.0  213.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 115.0 125.0 0.9 1.0 Fblob 
+ 115.0 175.0 0.9 1.0 Fblob 
+115.0 125.0 190.0 100 Ffermion 
+ 154.0  114.5 moveto 
+(ta-)   show
+ 196.0  98.0 moveto 
+(4)   show
+115.0 125.0 40 100 0 Fphoton 
+ 73.0  114.5 moveto 
+(a)   show
+ 34.0  100 moveto 
+(1)   show
+115.0 175.0 115.0 125.0 Ffermion 
+ 117.25  149.0 moveto 
+(ta+)   show
+190.0 200 115.0 175.0 Ffermion 
+ 139.0  193.5 moveto 
+(ta+)   show
+ 196.0  202.0 moveto 
+(3)   show
+40 200 115.0 175.0 0 Fphoton 
+ 79.0  189.5 moveto 
+(a)   show
+ 34.0  200 moveto 
+(2)   show
+ 70.0  83.0 moveto 
+( diagram 43 )   show
+ 130.0  83.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 307.0 125.0 0.9 1.0 Fblob 
+ 307.0 175.0 0.9 1.0 Fblob 
+307.0 125.0 382.0 100 Ffermion 
+ 346.0  114.5 moveto 
+(ta-)   show
+ 388.0  98.0 moveto 
+(4)   show
+307.0 125.0 232 100 0 Fphoton 
+ 265.0  114.5 moveto 
+(a)   show
+ 226.0  100 moveto 
+(1)   show
+307.0 175.0 307.0 125.0 Ffermion 
+ 309.25  149.0 moveto 
+(ta+)   show
+382.0 200 307.0 175.0 Ffermion 
+ 331.0  193.5 moveto 
+(ta+)   show
+ 388.0  202.0 moveto 
+(3)   show
+232 200 307.0 175.0 0 Fphoton 
+ 271.0  189.5 moveto 
+(a)   show
+ 226.0  200 moveto 
+(2)   show
+ 262.0  83.0 moveto 
+( diagram 44 )   show
+ 322.0  83.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=2, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=0, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 499.0 125.0 0.9 1.0 Fblob 
+ 499.0 175.0 0.9 1.0 Fblob 
+499.0 125.0 574.0 100 Ffermion 
+ 538.0  114.5 moveto 
+(ta-)   show
+ 580.0  98.0 moveto 
+(4)   show
+499.0 125.0 424 100 0 Fphoton 
+ 457.0  114.5 moveto 
+(a)   show
+ 418.0  100 moveto 
+(1)   show
+499.0 175.0 499.0 125.0 Ffermion 
+ 501.25  149.0 moveto 
+(ta+)   show
+574.0 200 499.0 175.0 Ffermion 
+ 523.0  193.5 moveto 
+(ta+)   show
+ 580.0  202.0 moveto 
+(3)   show
+424 200 499.0 175.0 0 Fphoton 
+ 463.0  189.5 moveto 
+(a)   show
+ 418.0  200 moveto 
+(2)   show
+ 454.0  83.0 moveto 
+( diagram 45 )   show
+ 514.0  83.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=2, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+showpage
+%%Page: 7 7 
+%%PageBoundingBox:-20 -20 600 800
+%%PageFonts: Helvetica
+/Helvetica findfont 6 scalefont setfont
+ 50         770  moveto
+ () show
+ 525         770  moveto
+ (page 7/7) show
+ 260         40  moveto
+ (Diagrams made by MadGraph5_aMC@NLO) show
+ 115.0 645.0 0.9 1.0 Fblob 
+115.0 645.0 190.0 620 Ffermion 
+ 154.0  634.5 moveto 
+(ta-)   show
+ 196.0  618.0 moveto 
+(4)   show
+115.0 645.0 40 620 0 Fphoton 
+ 73.0  634.5 moveto 
+(a)   show
+ 34.0  620 moveto 
+(1)   show
+115.0 695.0 115.0 645.0 Ffermion 
+ 117.25  669.0 moveto 
+(ta+)   show
+190.0 720 115.0 695.0 Ffermion 
+ 139.0  713.5 moveto 
+(ta+)   show
+ 196.0  722.0 moveto 
+(3)   show
+40 720 115.0 695.0 0 Fphoton 
+ 79.0  709.5 moveto 
+(a)   show
+ 34.0  720 moveto 
+(2)   show
+ 70.0  603.0 moveto 
+( diagram 46 )   show
+ 130.0  603.0 moveto 
+ (NP=1, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 307.0 645.0 0.9 1.0 Fblob 
+ 307.0 695.0 0.9 1.0 Fblob 
+307.0 645.0 382.0 620 Ffermion 
+ 346.0  634.5 moveto 
+(ta-)   show
+ 388.0  618.0 moveto 
+(4)   show
+307.0 645.0 232 620 0 Fphoton 
+ 265.0  634.5 moveto 
+(a)   show
+ 226.0  620 moveto 
+(1)   show
+307.0 695.0 307.0 645.0 Ffermion 
+ 309.25  669.0 moveto 
+(ta+)   show
+382.0 720 307.0 695.0 Ffermion 
+ 331.0  713.5 moveto 
+(ta+)   show
+ 388.0  722.0 moveto 
+(3)   show
+232 720 307.0 695.0 0 Fphoton 
+ 271.0  709.5 moveto 
+(a)   show
+ 226.0  720 moveto 
+(2)   show
+ 262.0  603.0 moveto 
+( diagram 47 )   show
+ 322.0  603.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 499.0 645.0 0.9 1.0 Fblob 
+ 499.0 695.0 0.9 1.0 Fblob 
+499.0 645.0 574.0 620 Ffermion 
+ 538.0  634.5 moveto 
+(ta-)   show
+ 580.0  618.0 moveto 
+(4)   show
+499.0 645.0 424 620 0 Fphoton 
+ 457.0  634.5 moveto 
+(a)   show
+ 418.0  620 moveto 
+(1)   show
+499.0 695.0 499.0 645.0 Ffermion 
+ 501.25  669.0 moveto 
+(ta+)   show
+574.0 720 499.0 695.0 Ffermion 
+ 523.0  713.5 moveto 
+(ta+)   show
+ 580.0  722.0 moveto 
+(3)   show
+424 720 499.0 695.0 0 Fphoton 
+ 463.0  709.5 moveto 
+(a)   show
+ 418.0  720 moveto 
+(2)   show
+ 454.0  603.0 moveto 
+( diagram 48 )   show
+ 514.0  603.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=1, NPceH=0, NPceW=1, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=2, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 115.0 515.0 0.9 1.0 Fblob 
+ 115.0 565.0 0.9 1.0 Fblob 
+115.0 515.0 190.0 490 Ffermion 
+ 154.0  504.5 moveto 
+(ta-)   show
+ 196.0  488.0 moveto 
+(4)   show
+115.0 515.0 40 490 0 Fphoton 
+ 73.0  504.5 moveto 
+(a)   show
+ 34.0  490 moveto 
+(1)   show
+115.0 565.0 115.0 515.0 Ffermion 
+ 117.25  539.0 moveto 
+(ta+)   show
+190.0 590 115.0 565.0 Ffermion 
+ 139.0  583.5 moveto 
+(ta+)   show
+ 196.0  592.0 moveto 
+(3)   show
+40 590 115.0 565.0 0 Fphoton 
+ 79.0  579.5 moveto 
+(a)   show
+ 34.0  590 moveto 
+(2)   show
+ 70.0  473.0 moveto 
+( diagram 49 )   show
+ 130.0  473.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=2, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=1, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+ 307.0 515.0 0.9 1.0 Fblob 
+ 307.0 565.0 0.9 1.0 Fblob 
+307.0 515.0 382.0 490 Ffermion 
+ 346.0  504.5 moveto 
+(ta-)   show
+ 388.0  488.0 moveto 
+(4)   show
+307.0 515.0 232 490 0 Fphoton 
+ 265.0  504.5 moveto 
+(a)   show
+ 226.0  490 moveto 
+(1)   show
+307.0 565.0 307.0 515.0 Ffermion 
+ 309.25  539.0 moveto 
+(ta+)   show
+382.0 590 307.0 565.0 Ffermion 
+ 331.0  583.5 moveto 
+(ta+)   show
+ 388.0  592.0 moveto 
+(3)   show
+232 590 307.0 565.0 0 Fphoton 
+ 271.0  579.5 moveto 
+(a)   show
+ 226.0  590 moveto 
+(2)   show
+ 262.0  473.0 moveto 
+( diagram 50 )   show
+ 322.0  473.0 moveto 
+ (NP=2, NPcG=0, NPcGtil=0, NPcH=0, NPcHB=0, NPcHBtil=0, NPcHDD=0, NPcHG=0, NPcHGtil=0, NPcHQ1=0, NPcHQ3=0, NPcHW=0, NPcHWB=0, NPcHWBtil=0, NPcHWtil=0, NPcHbox=0, NPcHbq=0, NPcHd=0, NPcHe=0, NPcHj1=0, NPcHj3=0, NPcHl1=0, NPcHl3=0, NPcHt=0, NPcHtb=0, NPcHu=0, NPcHud=0, NPcQQ1=0, NPcQQ8=0, NPcQb1=0, NPcQb8=0, NPcQd1=0, NPcQd8=0, NPcQe=0, NPcQj11=0, NPcQj18=0, NPcQj31=0, NPcQj38=0, NPcQl1=0, NPcQl3=0, NPcQt1=0, NPcQt8=0, NPcQtQb1=0, NPcQtQb8=0, NPcQtjd1=0, NPcQtjd8=0, NPcQu1=0, NPcQu8=0, NPcQujb1=0, NPcQujb8=0, NPcW=0, NPcWtil=0, NPcbB=0, NPcbG=0, NPcbH=0, NPcbW=0, NPcbb=0, NPcbd1=0, NPcbd8=0, NPcbe=0, NPcbj1=0, NPcbj8=0, NPcbl=0, NPcbu1=0, NPcbu8=0, NPcdB=0, NPcdG=0, NPcdH=0, NPcdW=0, NPcdd1=0, NPcdd8=0, NPceB=0, NPceH=0, NPceW=2, NPced=0, NPcee=0, NPceu=0, NPcjQbd1=0, NPcjQbd8=0, NPcjQtu1=0, NPcjQtu8=0, NPcjd1=0, NPcjd8=0, NPcje=0, NPcjj11=0, NPcjj18=0, NPcjj31=0, NPcjj38=0, NPcjtQd1=0, NPcjtQd8=0, NPcju1=0, NPcju8=0, NPcjuQb1=0, NPcjuQb8=0, NPcjujd1=0, NPcjujd11=0, NPcjujd8=0, NPcjujd81=0, NPcld=0, NPcle=0, NPcle1=0, NPcleQt1=0, NPcleQt3=0, NPclebQ=0, NPcledj=0, NPcleju1=0, NPcleju3=0, NPclj1=0, NPclj3=0, NPcll=0, NPcll1=0, NPclu=0, NPcpv=2, NPctB=0, NPctG=0, NPctH=0, NPctW=0, NPctb1=0, NPctb8=0, NPctd1=0, NPctd8=0, NPcte=0, NPctj1=0, NPctj8=0, NPctl=0, NPctt=0, NPctu1=0, NPctu8=0, NPcuB=0, NPcuG=0, NPcuH=0, NPcuW=0, NPcud1=0, NPcud8=0, NPcutbd1=0, NPcutbd8=0, NPcuu1=0, NPcuu8=0, NPprop=0, QCD=0, QED=2, SMHLOOP=0)   show
+showpage
+%%trailer
