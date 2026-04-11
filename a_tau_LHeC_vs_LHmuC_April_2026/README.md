@@ -183,7 +183,7 @@ Two ratio styles are kept in this directory on purpose.
 
 This uses
 
-$\frac{(d\sigma/dM)_{\text{BSM}}}{(d\sigma/dM)_{\text{SM}}}$
+$\frac{\left(d\sigma/dM_{\tau^+\tau^-}\right)_{\mathrm{BSM}}}{\left(d\sigma/dM_{\tau^+\tau^-}\right)_{\mathrm{SM}}}$
 
 and is the more directly physical comparison.
 
