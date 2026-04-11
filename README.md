@@ -35,84 +35,12 @@ The main observables studied in the scripts are:
 
 ```text
 Anomalous_Electromagnetic_Moments_of_tau_Lepton/
-├── a_tau/
-│   ├── SMEFTsim_MFV_MwScheme_UFO.tar.gz
-│   ├── SMEFTsim_MFV_alphaScheme_UFO.tar.gz
-│   ├── SMP-23-005-paper-v21.pdf
-│   ├── SMP-23-005-pas.pdf
-│   ├── calculate_ceB.py
-│   └── param_card.dat
-├── aa_to_tauta_analysis_code/
-│   ├── Combines_Multiple_LHE_Files.py
-│   ├── aa_to_tauta_analysis_code.py
-│   ├── aa_to_tauta_analysis_code_eta_pt.py
-│   ├── aa_to_tauta_analysis_code_difeta_difpt_difY.py
-│   ├── aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt.py
-│   ├── aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt_EPA.py
-│   ├── aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt_EPA_Ratio.py
-│   ├── aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt_EPA_Ratio_5M.py
-│   ├── aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt_EPA_Ratio_5M_EtaCut.py
-│   ├── cross_section_results.txt
-│   ├── Yll_elas_inel_data.txt
-│   ├── invariant_mass_tau_pair_ratio.txt
-│   └── several precomputed JPG figures
-└── README.md
+
 ```
 
 ---
 
 ## What each main script does
-
-### `a_tau/calculate_ceB.py`
-Computes the Wilson coefficient `ceB` from a chosen benchmark value of `Δa_τ`, using a simple numerical conversion formula.
-
-This is useful when you want to translate a target anomalous magnetic moment into the SMEFT input used in the model card.
-
-### `a_tau/param_card.dat`
-Sample MadGraph parameter card for the SMEFT setup. In the current card, the `ceB` entry is already set to a nonzero benchmark value.
-
-### `aa_to_tauta_analysis_code/Combines_Multiple_LHE_Files.py`
-Merges several `.lhe` event files into one larger file by keeping the header once, removing duplicated closing tags, and appending a final `</LesHouchesEvents>` line.
-
-This is useful for building higher-statistics samples from multiple MadGraph runs.
-
-### `aa_to_tauta_analysis_code/aa_to_tauta_analysis_code.py`
-Minimal first-pass script:
-
-- reads one LHE file
-- extracts `τ+` kinematics
-- produces basic `p_T(τ+)` and `η(τ+)` histograms
-
-### `aa_to_tauta_analysis_code/aa_to_tauta_analysis_code_eta_pt.py`
-Extends the basic parser to both taus and also plots the rapidity of the `τ+τ−` pair.
-
-### `aa_to_tauta_analysis_code/aa_to_tauta_analysis_code_difeta_difpt_difY.py`
-Moves from raw event counts to **weighted differential distributions**, using an integrated luminosity and total cross section.
-
-### `aa_to_tauta_analysis_code/aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt.py`
-Adds the invariant-mass distribution and compares SM and anomalous-coupling samples directly.
-
-### `aa_to_tauta_analysis_code/aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt_EPA.py`
-Adds overlays from external EPA reference tables:
-
-- `cross_section_results.txt`
-- `Yll_elas_inel_data.txt`
-
-This script generates the main invariant-mass and rapidity comparison plots.
-
-### `aa_to_tauta_analysis_code/aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt_EPA_Ratio.py`
-Builds on the EPA version and adds:
-
-- SM/BSM ratio plots
-- pseudo-data style statistical uncertainties
-- simple linear fits to the ratio distribution
-- final “publication-style” comparison figures
-
-### `aa_to_tauta_analysis_code/aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt_EPA_Ratio_5M.py`
-Higher-statistics variant intended for larger merged samples.
-
-### `aa_to_tauta_analysis_code/aa_to_tauta_analysis_code_difeta_difpt_difY_Mtt_EPA_Ratio_5M_EtaCut.py`
-Adds acceptance-style handling with an `η` cut and corresponding efficiency treatment.
 
 ---
 
