@@ -42,18 +42,12 @@ kinematics of photon-induced tau-pair production in two future lepton--hadron co
 The main observables studied are:
 
 - the invariant-mass spectrum
-  \[
-  \frac{d\sigma}{dM_{\tau^+\tau^-}}
-  \]
+  $  \frac{d\sigma}{dM_{\tau^+\tau^-}}$
 - the pair-rapidity distribution
-  \[
-  \frac{d\sigma}{dY_{\tau^+\tau^-}}
-  \]
+  $\frac{d\sigma}{dY_{\tau^+\tau^-}}$
 - the ratio between BSM and SM predictions
-  \[
-  \frac{\text{BSM}}{\text{SM}}
-  \]
-- linear fits to the ratio as a function of \(M_{\tau^+\tau^-}\)
+  $\frac{\text{BSM}}{\text{SM}}$
+- linear fits to the ratio as a function of $M_{\tau^+\tau^-}$
 
 The physical motivation is that anomalous dipole-type couplings are expected to harden the invariant-mass spectrum, so the largest deviations from the Standard Model should appear in the high-mass tail.
 
