@@ -510,7 +510,9 @@ def plot_physical_ratio(
     ax.step(series.centers[series.valid], series.ratio[series.valid], where="mid", linewidth=2.4, color="steelblue")
     ax.axhline(1.0, color="green", linestyle="--", linewidth=2.0, label="y=1")
     ymax = max(2.0, 1.2 * np.nanmax(series.ratio[series.valid])) if np.any(series.valid) else 2.0
-    ax.set_ylim(0.0, ymax)
+    # ax.set_ylim(0.0, ymax)
+    ax.set_xlim(10.0, 200.0)
+    ax.set_ylim(0.0, 2.0)
     ax.set_xlabel(r"$M_{\tau^+\tau^-}\;[\mathrm{GeV}]$")
     ax.set_ylabel(r"Ratio $(\mathrm{BSM}/\mathrm{SM})$")
     ax.set_title(rf"{collider_label} ($\delta a_\tau = {delta_a_tau:.3f}$)")
