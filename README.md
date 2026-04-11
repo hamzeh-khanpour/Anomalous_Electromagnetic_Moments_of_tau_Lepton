@@ -10,3 +10,8 @@ The goal of this repository is to provide a practical framework for:
 - producing kinematic distributions and SM/BSM comparisons,
 - and supporting phenomenological studies of tau electromagnetic couplings at
 - present and future lepton-hadron colliders. 
+
+
+## Author
+
+Hamzeh Khanpour (hamzeh.khanpour@agh.edu.pl)
