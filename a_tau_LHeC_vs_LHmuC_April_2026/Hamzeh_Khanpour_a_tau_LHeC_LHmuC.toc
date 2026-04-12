@@ -3,6 +3,6 @@
 \beamer@sectionintoc {2}{Formalism and EFT Interpretation}{6}{0}{2}
 \beamer@sectionintoc {3}{Collider Setups and Event Generation}{11}{0}{3}
 \beamer@sectionintoc {4}{Analysis Strategy}{16}{0}{4}
-\beamer@sectionintoc {5}{LHeC vs LH$\mu $C Plot Comparison}{18}{0}{5}
-\beamer@sectionintoc {6}{Current CMS Context and Future-Collider Motivation}{24}{0}{6}
-\beamer@sectionintoc {7}{Conclusions and Outlook}{27}{0}{7}
+\beamer@sectionintoc {5}{Sensitivity Estimation: LHeC vs LH$\mu $C}{18}{0}{5}
+\beamer@sectionintoc {6}{Current CMS Context and Future-Collider Motivation}{25}{0}{6}
+\beamer@sectionintoc {7}{Conclusions and Outlook}{26}{0}{7}

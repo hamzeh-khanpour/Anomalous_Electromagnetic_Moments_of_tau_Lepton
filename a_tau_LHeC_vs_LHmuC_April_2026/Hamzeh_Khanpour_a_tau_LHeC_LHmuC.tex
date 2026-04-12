@@ -71,7 +71,7 @@
     tautrack/.style={line width=1.4pt,-{Latex[length=3mm,width=2.5mm]},TauGreen},
     photon/.style={decorate,decoration={snake,amplitude=1.0mm,segment length=4mm},line width=1.0pt},
     blob/.style={circle,draw=black,fill=black,minimum size=5.5mm,inner sep=0pt},
-    hatchblob/.style={circle,draw=black,pattern=north east lines,pattern color=black,minimum size=8mm,inner sep=0pt}
+    hatchblob/.style={circle,draw=black,pattern=north east lines,pattern color=black,minimum size=6mm,inner sep=0pt}
 }
 
 \title[Anomalous $\tau$ moments at the LHeC and LH$\mu$C]{Anomalous electromagnetic moments of the tau lepton\\at the LHeC and LH$\mu$C}
@@ -121,7 +121,7 @@ at (current page.north east)
 \item Photon-induced $\gamma\gamma\to\tau^+\tau^-$ production provides a direct probe of the $\gamma\tau\tau$ vertex and therefore of \atau\ and \dtau.
 \end{itemize}
 \begin{block}{Physics target of this talk}
-\small Compare the truth-level sensitivity of the \textbf{LHeC} and the \textbf{LH$\mu$C} to anomalous $\tau$ electromagnetic moments using a benchmark \(\datau=0.008\) in photon-induced $\tau$-pair production.
+\small Compare the truth-level sensitivity of the {\color{red}{LHeC}} and the {\color{blue}{LH$\mu$C}} to anomalous $\tau$ electromagnetic moments using a benchmark \(\datau=0.008\) in photon-induced $\tau$-pair production.
 \end{block}
 \end{frame}
 %=====================================================
@@ -178,16 +178,16 @@ at (current page.north east)
 
 
 %=====================================================
-\begin{frame}{Current experimental status of \atau}
+\begin{frame}{Current experimental status of $a_{\tau}$}
 \begin{columns}[T]
-\begin{column}{0.57\textwidth}
+\begin{column}{0.65\textwidth}
 \begin{itemize}
 \justifying
 \small
-\item Earlier direct constraints came from \textbf{OPAL}, \textbf{L3}, and \textbf{DELPHI} in the LEP era.
-\item Heavy-ion measurements by \textbf{ATLAS Pb+Pb} and \textbf{CMS Pb+Pb} extended the reach using photon-induced processes at low di-$\tau$ masses.
-\item The recent \textbf{CMS pp} analysis observed $\gamma\gamma\to\tau^+\tau^-$ and set significantly improved limits on \atau\ and \dtau.
-\item The present future-collider study is motivated by the same central idea: the BSM effect becomes more visible in the hard region of the mass spectrum.
+\item Earlier direct constraints came from OPAL, L3, and DELPHI in the LEP era.
+\item Heavy-ion measurements by ATLAS Pb+Pb and CMS Pb+Pb extended the reach using photon-induced processes at low di-$\tau$ masses.
+\item The recent CMS pp analysis observed $\gamma\gamma\to\tau^+\tau^-$ and set significantly improved limits on \atau\ and \dtau [{\color{blue}Rept. Prog. Phys. 87 (2024) 107801}].
+\item The present future-collider study is motivated by the same central idea: {\color{red}the BSM effect becomes more visible in the hard region of the mass spectrum.}
 \end{itemize}
 \begin{exampleblock}{Representative CMS pp context}
 \justifying
@@ -213,13 +213,13 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 %=====================================================
 \begin{frame}{Why photon-induced $\gamma\gamma\to\tau^+\tau^-$?}
 \begin{columns}[T]
-\begin{column}{0.56\textwidth}
+\begin{column}{0.65\textwidth}
 \begin{itemize}
  \justifying
 \small
 \item The process probes the \(\gamma\tau\tau\) interaction directly and cleanly.
 \item In hadron or lepton--hadron environments, equivalent-photon emission from the beams can produce a relatively simple electromagnetic initial state.
-\item The invariant-mass spectrum of the $\tau^+\tau^-$ pair is particularly powerful because anomalous dipole-type couplings harden the high-mass tail.
+\item The invariant-mass spectrum of the $\tau^+\tau^-$ pair is particularly powerful because {\color{blue}anomalous dipole-type couplings harden the high-mass tail}.
 \item This makes the process attractive both for present measurements and for future-machine sensitivity studies.
 \end{itemize}
 \takehome{
@@ -299,8 +299,11 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 
 %=====================================================
 \begin{frame}{SMEFT interpretation of anomalous $\tau$ moments}
+\begin{columns}[T,onlytextwidth]
+%---------------- left column ----------------
+\begin{column}{0.77\textwidth}
 \begin{itemize}
- \justifying
+\justifying
 \item In the SMEFT language, the relevant dim-6 operators can be written as
 \end{itemize}
 \[
@@ -313,9 +316,9 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 \right]+\mathrm{h.c.}
 \]
 \begin{itemize}
- \justifying
-    \item After electroweak symmetry breaking, the physical photon combination appears through a linear combination of the Wilson coefficients.
-    \item The real part gives the CP-even magnetic deformation and the imaginary part gives the CP-odd electric-dipole deformation.
+\justifying
+\item After electroweak symmetry breaking, the physical photon combination appears through a linear combination of the Wilson coefficients.
+\item The real part gives the CP-even magnetic deformation and the imaginary part gives the CP-odd electric-dipole deformation.
 \end{itemize}
 \[
 \textcolor{TauBlue}{\ddtau}=\frac{\sqrt2\,v}{\Lam^2}\,\mathrm{Im}\!\left[\cos\theta_W\,\ctb-\sin\theta_W\,\ctw\right],
@@ -323,6 +326,18 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 \[
 \textcolor{TauBlue}{\datau}=\frac{2m_{\tau}}{e}\,\frac{\sqrt2\,v}{\Lam^2}\,\mathrm{Re}\!\left[\cos\theta_W\,\ctb-\sin\theta_W\,\ctw\right].
 \]
+\end{column}
+%---------------- right column ----------------
+\begin{column}{0.20\textwidth}
+\vspace*{3.0cm}
+\centering
+\hspace*{0.4cm}\includegraphics[width=\linewidth]{Ctb.png}
+\vspace{0.3em}
+{\scriptsize
+Dipole-type SMEFT insertion associated with \(\ctb/\Lam^2\).
+}
+\end{column}
+\end{columns}
 \end{frame}
 %=====================================================
 
@@ -331,23 +346,23 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 %=====================================================
 \begin{frame}{Benchmark implementation used in this study}
 \begin{columns}[T]
-\begin{column}{0.60\textwidth}
+\begin{column}{0.65\textwidth}
 \begin{itemize}
- \justifying
-    \item Event generation is performed with the \texttt{SMEFTsim\_top\_alphaScheme\_UFO} model.
-    \item The present local benchmark corresponds to a nonzero CP-even dipole deformation associated with the tau sector and interpreted as \(\datau=0.008\).
-    \item In the local banners, the BSM benchmark is realized using a nonzero tau dipole Wilson-coefficient entry and \(\Lam=2~\mathrm{TeV}\) for the EFT normalization.
-    \item The study is designed as a \textbf{truth-level comparison} between the SM and a single illustrative BSM benchmark, not yet as a detector-level limit extraction.
+\justifying
+\item Event generation is performed with the {\color{red}\texttt{SMEFTsim\_top\_alphaScheme\_UFO}} model.
+\item The present local benchmark corresponds to a nonzero CP-even dipole deformation associated with the tau sector and interpreted as \(\datau=0.008\).
+\item In the local banners, the BSM benchmark is realized using a nonzero tau dipole Wilson-coefficient entry and \(\Lam= {\color{red}2}~\mathrm{TeV}\) for the EFT normalization.
+\item The study is designed as a {\color{blue}truth-level comparison} between the SM and a single illustrative BSM benchmark, not yet as a detector-level limit extraction.
 \end{itemize}
 \end{column}
 \begin{column}{0.36\textwidth}
 \begin{block}{Color legend}
 \small
 \begin{itemize}
- \justifying
-    \item \textcolor{TauBlue}{\(\atau,\ \datau\)}: magnetic moment sector
-    \item \textcolor{TauGreen}{\(\dtau,\ \ddtau\)}: electric dipole sector
-    \item \textcolor{TauOrange}{\(\ctb,\ctw,\Lam\)}: EFT parameters
+\justifying
+\item \textcolor{TauBlue}{\(\atau,\ \datau\)}: magnetic moment sector
+\item \textcolor{TauGreen}{\(\dtau,\ \ddtau\)}: electric dipole sector
+\item \textcolor{TauOrange}{\(\ctb,\ctw,\Lam\)}: EFT parameters
 \end{itemize}
 \end{block}
 \end{column}
@@ -357,66 +372,121 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 
 
 
+% Optional style (put once in the preamble if not already defined)
+\tikzset{
+	eftcircle/.style={
+		circle,
+		draw=TauBlue,
+		line width=1.3pt,
+		fill=white,
+		pattern=north east lines,
+		pattern color=TauBlue,
+		minimum size=2mm,
+		inner sep=0pt
+	}
+}
+
 %=====================================================
 \begin{frame}{Amplitude structure and representative diagrams}
+	
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}
+%------------------------------------------------
+\begin{column}{0.28\textwidth}
 \centering
-\begin{tikzpicture}[scale=0.80]
-  \node at (0,2.6) {\small SM};
-  \draw[photon] (-1.7,0.1)--(-0.3,0.6);
-  \draw[photon] (-1.7,2.3)--(-0.3,1.8);
-  \fill (-0.2,0.65) circle (0.05);
-  \fill (-0.2,1.75) circle (0.05);
-  \draw[tautrack] (-0.2,0.65)--(-0.2,1.75);
-  \draw[tautrack] (-0.2,0.65)--(1.5,0.1);
-  \draw[tautrack] (-0.2,1.75)--(1.5,2.3);
-  \node at (-1.95,0.0) {\scriptsize $\gamma$};
-  \node at (-1.95,2.4) {\scriptsize $\gamma$};
-  \node[TauGreen] at (1.9,0.0) {\scriptsize $\tau^+$};
-  \node[TauGreen] at (1.9,2.4) {\scriptsize $\tau^-$};
+\begin{tikzpicture}[scale=0.92]
+\node at (0.2,3.15) {\small SM};
+				
+				% vertices
+				\fill[TauGreen] (0,2.0) circle (0.085);
+				\fill[TauGreen] (0,0.8) circle (0.085);
+				
+				% photons
+				\draw[photon] (-1.55,2.75) -- (0,2.0);
+				\draw[photon] (-1.55,-0.05) -- (0,0.8);
+				
+				% fermion lines
+				\draw[TauGreen,line width=1.5pt,-{Latex[length=3mm,width=2.5mm]}] (0,2.0) -- (0,0.8);
+				\draw[TauGreen,line width=1.5pt,{Latex[length=3mm,width=2.5mm]}-] (0,2.0) -- (2.15,2.55);
+				\draw[TauGreen,line width=1.5pt,-{Latex[length=3mm,width=2.5mm]}] (0,0.8) -- (2.15,0.25);
+				
+				% labels
+				\node at (-1.82,2.45) {\scriptsize $\gamma$};
+				\node at (-1.82,0.55) {\scriptsize $\gamma$};
+				\node[TauGreen] at (-0.28,1.42) {\scriptsize $\tau$};
+				\node[TauGreen] at (2.58,2.58) {\scriptsize $\tau^{+}$};
+				\node[TauGreen] at (2.58,0.18) {\scriptsize $\tau^{-}$};
 \end{tikzpicture}
 \end{column}
-\begin{column}{0.32\textwidth}
+%------------------------------------------------
+\begin{column}{0.28\textwidth}
 \centering
-\begin{tikzpicture}[scale=0.80]
-  \node at (0,2.6) {\small linear BSM insertion};
-  \draw[photon] (-1.7,0.1)--(-0.3,0.6);
-  \draw[photon] (-1.7,2.3)--(-0.3,1.8);
-  \fill (-0.2,0.65) circle (0.05);
-  \node[blob] at (-0.2,1.75) {};
-  \draw[tautrack] (-0.2,0.65)--(-0.2,1.75);
-  \draw[tautrack] (-0.2,0.65)--(1.5,0.1);
-  \draw[tautrack] (-0.2,1.75)--(1.5,2.3);
-  \node at (-1.95,0.0) {\scriptsize $\gamma$};
-  \node at (-1.95,2.4) {\scriptsize $\gamma$};
-  \node[TauGreen] at (1.9,0.0) {\scriptsize $\tau^+$};
-  \node[TauGreen] at (1.9,2.4) {\scriptsize $\tau^-$};
+\begin{tikzpicture}[scale=0.92]
+\node at (0.2,3.15) {\small linear BSM insertion};
+				
+				% vertices
+				\fill[TauGreen] (0,2.0) circle (0.085);
+				\fill[TauGreen] (0,0.8) circle (0.085);
+				
+				% EFT insertion (one circle)
+				\node[eftcircle] at (0,2.0) {};
+				
+				% photons
+				\draw[photon] (-1.55,2.75) -- (0,2.0);
+				\draw[photon] (-1.55,-0.05) -- (0,0.8);
+				
+				% fermion lines
+				\draw[TauGreen,line width=1.5pt,-{Latex[length=3mm,width=2.5mm]}] (0,2.0) -- (0,0.8);
+				\draw[TauGreen,line width=1.5pt,{Latex[length=3mm,width=2.5mm]}-] (0,2.0) -- (2.15,2.55);
+				\draw[TauGreen,line width=1.5pt,-{Latex[length=3mm,width=2.5mm]}] (0,0.8) -- (2.15,0.25);
+				
+				% labels
+				\node at (-1.82,2.45) {\scriptsize $\gamma$};
+				\node at (-1.82,0.55) {\scriptsize $\gamma$};
+				\node[TauGreen] at (-0.28,1.42) {\scriptsize $\tau$};
+				\node[TauGreen] at (2.58,2.58) {\scriptsize $\tau^{+}$};
+				\node[TauGreen] at (2.58,0.18) {\scriptsize $\tau^{-}$};
 \end{tikzpicture}
 \end{column}
-\begin{column}{0.32\textwidth}
+%------------------------------------------------
+\begin{column}{0.28\textwidth}
 \centering
-\begin{tikzpicture}[scale=0.80]
-  \node at (0,2.6) {\small quadratic BSM term};
-  \draw[photon] (-1.7,0.1)--(-0.3,0.6);
-  \draw[photon] (-1.7,2.3)--(-0.3,1.8);
-  \node[blob] at (-0.2,0.65) {};
-  \node[blob] at (-0.2,1.75) {};
-  \draw[tautrack] (-0.2,0.65)--(-0.2,1.75);
-  \draw[tautrack] (-0.2,0.65)--(1.5,0.1);
-  \draw[tautrack] (-0.2,1.75)--(1.5,2.3);
-  \node at (-1.95,0.0) {\scriptsize $\gamma$};
-  \node at (-1.95,2.4) {\scriptsize $\gamma$};
-  \node[TauGreen] at (1.9,0.0) {\scriptsize $\tau^+$};
-  \node[TauGreen] at (1.9,2.4) {\scriptsize $\tau^-$};
+\begin{tikzpicture}[scale=0.92]
+				\node at (0.2,3.15) {\small quadratic BSM term};
+				
+				% vertices
+				\fill[TauGreen] (0,2.0) circle (0.085);
+				\fill[TauGreen] (0,0.8) circle (0.085);
+				
+				% EFT insertions (two circles)
+				\node[eftcircle] at (0,2.0) {};
+				\node[eftcircle] at (0,0.8) {};
+				
+				% photons
+				\draw[photon] (-1.55,2.75) -- (0,2.0);
+				\draw[photon] (-1.55,-0.05) -- (0,0.8);
+				
+				% fermion lines
+				\draw[TauGreen,line width=1.5pt,-{Latex[length=3mm,width=2.5mm]}] (0,2.0) -- (0,0.8);
+				\draw[TauGreen,line width=1.5pt,{Latex[length=3mm,width=2.5mm]}-] (0,2.0) -- (2.15,2.55);
+				\draw[TauGreen,line width=1.5pt,-{Latex[length=3mm,width=2.5mm]}] (0,0.8) -- (2.15,0.25);
+				
+				% labels
+				\node at (-1.82,2.45) {\scriptsize $\gamma$};
+				\node at (-1.82,0.55) {\scriptsize $\gamma$};
+				\node[TauGreen] at (-0.28,1.42) {\scriptsize $\tau$};
+				\node[TauGreen] at (2.58,2.58) {\scriptsize $\tau^{+}$};
+				\node[TauGreen] at (2.58,0.18) {\scriptsize $\tau^{-}$};
 \end{tikzpicture}
 \end{column}
+%------------------------------------------------
 \end{columns}
-\vspace{1ex}
+\vspace{1.0ex}
 \begin{block}{Interpretation of the generated samples}
- \justifying
-\small The SM sample uses \texttt{NP=0}. The benchmark BSM sample uses \texttt{NP<=2}, so the resulting prediction contains the SM contribution together with interference and quadratic EFT effects in the chosen MadGraph operator-order convention.
+\justifying
+\small
+The SM sample is generated with \texttt{NP=0}. The benchmark BSM sample is generated with \texttt{NP<=2}, so the prediction includes the Standard Model contribution together with the interference term and the quadratic EFT contribution in the MadGraph operator-order convention used in this study.
 \end{block}
+	
 \end{frame}
 %=====================================================
 
@@ -426,7 +496,7 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 
 
 %=====================================================
-\begin{frame}{Future lepton--hadron collider program considered here}
+\begin{frame}{Future lepton-hadron collider program considered here}
 \begin{columns}[T]
 \begin{column}{0.49\textwidth}
 \begin{block}{LHeC}
@@ -439,7 +509,7 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 \end{block}
 \end{column}
 \begin{column}{0.49\textwidth}
-\begin{block}{LHmuC}
+\begin{block}{LH$\mu$C}
 \begin{itemize}
  \justifying
     \item proton beam: \(E_p=7~\mathrm{TeV}\)
@@ -450,9 +520,9 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 \end{column}
 \end{columns}
 \begin{itemize}
- \justifying
-    \item The present study keeps the comparison symmetric: the same process, the same EFT benchmark, and the same LHE-level analysis logic are used for both colliders.
-    \item This makes the difference in the observed BSM distortion directly interpretable as a collider-environment effect within the current setup.
+\justifying
+\item The present study keeps the comparison symmetric: the same process, the same EFT benchmark, and the same LHE-level analysis logic are used for both colliders.
+\item This makes the difference in the observed BSM distortion directly interpretable as a collider-environment effect within the current setup.
 \end{itemize}
 \end{frame}
 %=====================================================
@@ -477,13 +547,13 @@ import model SMEFTsim\_top\_alphaScheme\_UFO\\
 generate a a > ta+ ta- / h h1 NP<=2 SMHLOOP=0
 \end{block}
 \end{column}
-\begin{column}{0.44\textwidth}
+\begin{column}{0.45\textwidth}
 \begin{itemize}
- \justifying
-    \item The hard process is identical in the two colliders; only the beam configuration changes.
-    \item \texttt{NP=0} isolates the SM contribution.
-    \item \texttt{NP<=2} includes the benchmark BSM effects together with the SM piece in the operator-order counting used in the model.
-    \item This is especially important in the hard tail, where quadratic contributions can visibly enhance the spectrum.
+\justifying
+\item The hard process is identical in the two colliders; only the beam configuration changes.
+\item \texttt{NP=0} isolates the SM contribution.
+\item \texttt{NP<=2} includes the benchmark BSM effects together with the SM piece in the operator-order counting used in the model.
+\item This is especially important in the hard tail, where quadratic contributions can visibly enhance the spectrum.
 \end{itemize}
 \end{column}
 \end{columns}
@@ -519,10 +589,11 @@ pdlabel2 = iww
 \end{block}
 \end{column}
 \end{columns}
+\vspace{1cm}
 \begin{itemize}
- \justifying
-    \item The current local setup uses an equivalent-photon description of the beams through the \texttt{iww} choice.
-    \item This is therefore a generator-level truth study using an effective photon-emission picture, not a full detector simulation.
+\justifying
+\item The current local setup uses an equivalent-photon description of the beams through the \texttt{iww} choice.
+\item This is therefore a generator-level truth study using an effective photon-emission picture, not a full detector simulation.
 \end{itemize}
 \end{frame}
 %=====================================================
@@ -583,7 +654,7 @@ LH$\mu$C @ 3.7 TeV & 55.094 & 56.461 & $5\times10^6$ \\
 \begin{itemize}
 \justifying
 \item The effective luminosities inferred from the Monte Carlo sample sizes are approximately \(97.5~\mathrm{fb}^{-1}\) for the LHeC benchmark and \(89.7~\mathrm{fb}^{-1}\) for the LH$\mu$C benchmark.
-\item These values are \textbf{Monte Carlo effective luminosities} used for the plot normalization logic; they are not the final projected machine luminosities for a full experimental analysis.
+\item These values are \color{red}{Monte Carlo effective luminosities} used for the plot normalization logic; they are not the final projected machine luminosities for a full experimental analysis.
 \end{itemize}
 \end{frame}
 %=====================================================
@@ -616,12 +687,12 @@ LH$\mu$C @ 3.7 TeV & 55.094 & 56.461 & $5\times10^6$ \\
 %=====================================================
 \begin{frame}{Observables used in the comparison}
 \begin{columns}[T]
-\begin{column}{0.48\textwidth}
+\begin{column}{0.50\textwidth}
 \begin{block}{Primary observables}
 \[
-\frac{d\sigma}{d\Mtt},
+\frac{d\sigma}{d\Mtt} (\frac{pb}{GeV}),
 \qquad
-\frac{d\sigma}{d\Ytt}
+\frac{d\sigma}{d\Ytt} (\frac{pb}{GeV}),
 \]
 \begin{itemize}
  \justifying
@@ -630,7 +701,7 @@ LH$\mu$C @ 3.7 TeV & 55.094 & 56.461 & $5\times10^6$ \\
 \end{itemize}
 \end{block}
 \end{column}
-\begin{column}{0.48\textwidth}
+\begin{column}{0.50\textwidth}
 \begin{block}{Ratio observables}
 \[
 \frac{\left(d\sigma/dM\right)_{\mathrm{BSM}}}{\left(d\sigma/dM\right)_{\mathrm{SM}}}
@@ -650,31 +721,45 @@ The entire comparison is designed to quantify how strongly the benchmark \(\data
 %=====================================================
 
 
-\section{LHeC vs LH$\mu$C Plot Comparison}
+\section{Sensitivity Estimation: LHeC vs LH$\mu$C}
 
 
 %=====================================================
 \begin{frame}{Invariant-mass spectrum: LHeC vs LH$\mu$C}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.45\textwidth}
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\linewidth]{Invariant_mass_tau_pair_SM_vs_BSM_delta_aTau_LHeC.png}
-\end{column}
-\begin{column}{0.45\textwidth}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\linewidth]{Invariant_mass_tau_pair_SM_vs_BSM_delta_aTau_LHmuC.png}
-\end{column}
-\end{columns}
-\vspace{0.4em}
+\end{minipage}
+\caption{\small
+\justifying
+Comparison of the invariant-mass distributions for photon-induced \(\gamma\gamma \to \tau^+\tau^-\) production at the LHeC and LH$\mu$C for the SM and the benchmark anomalous coupling \(\datau=0.008\). In both cases, the BSM contribution hardens the \(\Mtt\) spectrum relative to the SM expectation.
+}
+\end{figure}
+\end{frame}
+%=====================================================
+
+%=====================================================
+\begin{frame}{Findings from the invariant-mass comparison}
 \begin{itemize}
 \justifying
-\small
-    \item In both colliders, the benchmark \(\datau=0.008\) produces a harder \(\Mtt\) spectrum than the SM prediction.
-    \item The separation between the SM and BSM curves becomes more visible toward larger invariant mass.
-    \item The effect is more pronounced for the \textbf{LH$\mu$C}, indicating stronger sensitivity to anomalous dipole effects in the hard tail.
+\item In both collider configurations, the benchmark value \(\datau=0.008\) produces a harder \(\Mtt\) spectrum than the Standard Model prediction.
+\item The separation between the SM and BSM curves becomes increasingly visible toward larger invariant mass, showing that the anomalous dipole contribution mainly affects the hard tail.
+\item This trend is physically expected, since dipole-type interactions become more important at higher momentum transfer.
+\item The effect is more pronounced for the LH$\mu$C, where the BSM enhancement in the high-\(\Mtt\) region is visibly stronger than in the LHeC case.
+\item Therefore, already at the level of the invariant-mass spectrum, the LH$\mu$C appears more sensitive to anomalous \(\tau\)-dipole effects in the present truth-level benchmark setup.
 \end{itemize}
+	
 \takehome{
- \justifying The invariant-mass tail already indicates that the LH$\mu$C is more promising than the LHeC for \atau\ sensitivity in the present truth-level setup.}
+\justifying
+The invariant-mass tail is the most discriminating observable in this study, and its stronger deformation at the {\color{red} LH$\mu$C already suggests a better sensitivity to \atau\ than at the LHeC}.
+}
 \end{frame}
 %=====================================================
 
@@ -696,9 +781,10 @@ The entire comparison is designed to quantify how strongly the benchmark \(\data
 \begin{itemize}
 \justifying
 \small
-    \item The rapidity distributions remain broadly central and are modified only mildly by the benchmark BSM coupling.
-    \item Compared with the mass spectrum, the rapidity variable is less discriminating for the anomalous magnetic-moment benchmark.
-    \item This supports the strategy of emphasizing the invariant-mass tail as the main sensitivity channel.
+%\item The rapidity distributions remain broadly central and are modified only mildly by the benchmark BSM coupling.
+\item The \(\mathrm{LH}\mu\mathrm{C}\) distribution is more central because its \(p\mu^+\) beam-energy configuration is less asymmetric than the \(pe\) setup of the LHeC. As a result, the \(\gamma\gamma\) system has a smaller longitudinal boost, and the \(\tau^+\tau^-\) pair is produced closer to \(Y_{\tau^+\tau^-}\simeq 0\).
+%\item Compared with the mass spectrum, the rapidity variable is less discriminating for the anomalous magnetic-moment benchmark.
+%\item This supports the strategy of emphasizing the invariant-mass tail as the main sensitivity channel.
 \end{itemize}
 %\takehome{
 % \justifying Rapidity is useful as a consistency check, but the dominant information on \atau\ comes from the mass spectrum rather than from a dramatic reshaping of \(\Ytt\).}
@@ -721,13 +807,13 @@ The entire comparison is designed to quantify how strongly the benchmark \(\data
 \end{columns}
 \vspace{0.4em}
 \begin{itemize}
- \justifying
-    \item This is the most directly physical comparison, because it uses the weighted differential spectra rather than only raw count ratios.
-    \item For both colliders, the ratio stays close to unity at low mass and rises above unity as the invariant mass increases.
-    \item The rise is stronger for the \textbf{LH$\mu$C}, showing that the same benchmark \(\datau\) produces a larger relative deviation from the SM in that environment.
+\justifying
+\item This is the most directly physical comparison, because it uses the weighted differential spectra rather than only raw count ratios.
+\item For both colliders, the ratio stays close to unity at low mass and rises above unity as the invariant mass increases.
+\item The rise is stronger for the LH$\mu$C, showing that the same benchmark \(\datau\) produces a larger relative deviation from the SM in that environment.
 \end{itemize}
 \takehome{
- \justifying
+\justifying
 The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$\mu$C.}
 \end{frame}
 %=====================================================
@@ -748,13 +834,13 @@ The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$
 \end{columns}
 \vspace{0.4em}
 \begin{itemize}
- \justifying
-    \item The linear fit \(y(M)=aM+b\) compresses the visual trend into a compact measure of tail hardening.
-    \item In the present benchmark study, the fitted slope is larger for the \textbf{LH$\mu$C} than for the \textbf{LHeC}.
-    \item A larger positive slope means a more rapidly growing departure from the SM toward high invariant mass.
+\justifying
+\item The linear fit \(y(M)=aM+b\) compresses the visual trend into a compact measure of tail hardening.
+\item In the present benchmark study, the fitted slope is larger for the LH$\mu$C than for the LHeC.
+\item A larger positive slope means a more rapidly growing departure from the SM toward high invariant mass.
 \end{itemize}
 \takehome{
- \justifying Even at the level of a compact slope summary, the LH$\mu$C shows the stronger \atau-sensitive growth with \(\Mtt\).}
+\justifying Even at the level of a compact slope summary, the LH$\mu$C shows the stronger \atau-sensitive growth with \(\Mtt\).}
 \end{frame}
 %=====================================================
 
@@ -773,13 +859,13 @@ The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$
 \end{columns}
 \vspace{0.4em}
 \begin{itemize}
- \justifying
-    \item The custom-bin fit places more flexibility in the higher-mass region where the anomalous effect is most relevant.
-    \item The qualitative conclusion remains stable: the LH$\mu$C exhibits the steeper rise and therefore the stronger BSM sensitivity.
-    \item The hierarchy between colliders is therefore robust across the direct spectrum plots, weighted ratios, and the two fit strategies.
+\justifying
+\item The custom-bin fit places more flexibility in the higher-mass region where the anomalous effect is most relevant.
+\item The qualitative conclusion remains stable: the LH$\mu$C exhibits the steeper rise and therefore the stronger BSM sensitivity.
+\item The hierarchy between colliders is therefore robust across the direct spectrum plots, weighted ratios, and the two fit strategies.
 \end{itemize}
 \takehome{
- \justifying Across all comparison views in this benchmark study, the LH$\mu$C appears more sensitive to \atau\ than the LHeC.}
+\justifying Across all comparison views in this benchmark study, the LH$\mu$C appears more sensitive to \atau\ than the LHeC.}
 \end{frame}
 %=====================================================
 
@@ -791,24 +877,25 @@ The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$
 \begin{column}{0.53\textwidth}
 \begin{block}{What all five comparisons consistently show}
 \begin{itemize}
- \justifying
-    \item The anomalous benchmark hardens the \(\tau^+\tau^-\) invariant-mass spectrum.
-    \item The rapidity spectrum changes much less strongly.
-    \item The BSM/SM ratio grows with \(\Mtt\) rather than remaining flat.
-    \item The growth is stronger for the \textbf{LH$\mu$C} than for the \textbf{LHeC}.
+\justifying
+\item The anomalous benchmark hardens the \(\tau^+\tau^-\) invariant-mass spectrum.
+\item The rapidity spectrum changes much less strongly.
+\item The BSM/SM ratio grows with \(\Mtt\) rather than remaining flat.
+\item The growth is stronger for the LH$\mu$C than for the LHeC.
 \end{itemize}
 \end{block}
 \end{column}
-\begin{column}{0.43\textwidth}
+\begin{column}{0.45\textwidth}
 \begin{exampleblock}{Scientifically careful conclusion}
- \justifying
-\small Within the present \textbf{truth-level benchmark study} based on merged MadGraph LHE samples, the \textbf{LH$\mu$C} appears more promising than the \textbf{LHeC} for probing \atau\ through photon-induced \(\tau^+\tau^-\) production.
+\justifying
+\small Within the present \textbf{truth-level benchmark study} based on merged MadGraph LHE samples, the LH$\mu$C appears more promising than the LHeC for probing \atau\ through photon-induced \(\tau^+\tau^-\) production.
 \end{exampleblock}
 \end{column}
 \end{columns}
+\vspace{0.5cm}
 \begin{itemize}
- \justifying
-    \item This statement concerns the current generator-level setup and should not yet be read as a final detector-level exclusion result.
+\justifying
+\item This statement concerns the current generator-level setup and should not yet be read as a final detector-level exclusion result.
 \end{itemize}
 \end{frame}
 %=====================================================
@@ -821,72 +908,29 @@ The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$
 %=====================================================
 \begin{frame}{How the future-collider study connects to CMS pp results}
 \begin{columns}[T]
-\begin{column}{0.70\textwidth}
+\begin{column}{0.63\textwidth}
 \begin{itemize}
- \justifying
-    \item CMS has observed \(\gamma\gamma\to\tau^+\tau^-\) in pp collisions and used the rate and mass-shape information to constrain \atau\ and \dtau.
-    \item The analysis relies on an exclusivity strategy: low hadronic activity, low acoplanarity, and low track multiplicity near the dilepton or ditau vertex.
-    \item The key conceptual overlap with our future-collider study is the same: BSM effects are enhanced in the higher-mass region.
-    \item Future lepton--hadron colliders offer a complementary environment in which photon-induced processes can be studied with different beam kinematics and cleaner initial-state control.
+\justifying
+\item CMS has observed \(\gamma\gamma\to\tau^+\tau^-\) in pp collisions and used the rate and mass-shape information to constrain \atau\ and \dtau.
+\item The analysis relies on an exclusivity strategy: low hadronic activity, low acoplanarity, and low track multiplicity near the dilepton or ditau vertex.
+\item The key conceptual overlap with our future-collider study is the same: BSM effects are enhanced in the higher-mass region.
+\item Future lepton--hadron colliders offer a complementary environment in which photon-induced processes can be studied with different beam kinematics and cleaner initial-state control.
 \end{itemize}
 \end{column}
-\begin{column}{0.38\textwidth}
-% \includegraphics[width=\linewidth]{cms_topology_gamma_gamma_tautau.png}
-% TODO: add pp topology / exclusive vs dissociative screenshot
-\placeholdergraphic{CMS topology / elastic, semiexclusive, and dissociative picture.}{0.54\textheight}
+\begin{column}{0.55\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{pptautau_CMS.png}
+\caption{\small
+\justifying
+Schematic illustration of photon-induced \(\gamma\gamma \to \tau^+\tau^-\) production in \(pp\) collisions, showing the elastic, semiexclusive, and dissociative topologies relevant for the CMS analysis. }
+\end{figure}
 \end{column}
 \end{columns}
 \end{frame}
 %=====================================================
 
 
-%=====================================================
-\begin{frame}{CMS-inspired observables and why the hard tail matters}
-\begin{columns}[T]
-\begin{column}{0.48\textwidth}
-% \includegraphics[width=\linewidth]{cms_world_aTau_dTau.png}
-% TODO: add world-comparison screenshot
-\placeholdergraphic{World status figure for \(\atau\) and \(\dtau\).}{0.44\textheight}
-\end{column}
-\begin{column}{0.48\textwidth}
-% \includegraphics[width=\linewidth]{cms_likelihood_aTau.png}
-% TODO: add likelihood scan screenshot
-\placeholdergraphic{Likelihood scan or confidence-interval figure for \(\atau\).}{0.44\textheight}
-\end{column}
-\end{columns}
-\vspace{0.5em}
-\begin{itemize}
- \justifying
-    \item In CMS, the accessible phase space and the exclusivity strategy make the mass shape central for BSM sensitivity.
-    \item The future LHeC/LH$\mu$C study follows the same general logic at truth level: the hard region carries the most visible anomalous-coupling information.
-\end{itemize}
-\end{frame}
-%=====================================================
-
-
-
-%=====================================================
-\begin{frame}{CMS control-region and exclusivity placeholders}
-\begin{columns}[T]
-\begin{column}{0.48\textwidth}
-% \includegraphics[width=\linewidth]{cms_ntracks_validation.png}
-% TODO: add screenshot of Ntracks validation / low-track excess
-\placeholdergraphic{Track-multiplicity validation / low-track signal-region motivation.}{0.44\textheight}
-\end{column}
-\begin{column}{0.48\textwidth}
-% \includegraphics[width=\linewidth]{cms_mumu_control_region.png}
-% TODO: add screenshot of mu mu control region / elastic rescaling figure
-\placeholdergraphic{Muon control-region figure for dissociative rescaling / elastic normalization.}{0.44\textheight}
-\end{column}
-\end{columns}
-\vspace{0.5em}
-\begin{itemize}
- \justifying
-    \item These CMS ingredients are useful reference points for the long-term detector-level development of the lepton--hadron collider study.
-    \item They motivate how future work can move beyond truth-level shapes toward realistic sensitivity projections.
-\end{itemize}
-\end{frame}
-%=====================================================\\
 
 
 
@@ -896,16 +940,16 @@ The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$
 %=====================================================
 \begin{frame}{Main conclusions}
 \begin{itemize}
- \justifying
-    \item We studied photon-induced \(\gamma\gamma\to\tau^+\tau^-\) production at two future lepton--hadron colliders: the \textbf{LHeC} and the \textbf{LH$\mu$C}.
-    \item The benchmark anomalous coupling \(\datau=0.008\) hardens the invariant-mass spectrum relative to the Standard Model.
-    \item The rapidity distributions are comparatively less discriminating than the mass spectrum.
-    \item The BSM/SM ratio grows with \(\Mtt\), showing that the hard tail is the key region for sensitivity.
-    \item Across the invariant-mass, weighted-ratio, and fit-based comparisons, the \textbf{LH$\mu$C} exhibits the stronger high-mass response.
+\justifying
+\item We studied photon-induced \(\gamma\gamma\to\tau^+\tau^-\) production at two future lepton--hadron colliders: the {\color{red}LHeC} and the {\color{blue}LH$\mu$C}.
+\item The benchmark anomalous coupling \(\datau=0.008\) hardens the invariant-mass spectrum relative to the Standard Model.
+\item The rapidity distributions are comparatively less discriminating than the mass spectrum.
+\item The BSM/SM ratio grows with \(\Mtt\), showing that the hard tail is the key region for sensitivity.
+\item Across the invariant-mass, weighted-ratio, and fit-based comparisons, the {\color{blue}LH$\mu$C} exhibits the stronger high-mass response.
 \end{itemize}
 \begin{alertblock}{Bottom line}
- \justifying
-\small In the present truth-level benchmark study, the \textbf{LH$\mu$C} is favored over the \textbf{LHeC} for probing the anomalous magnetic moment \atau\ in photon-induced $\tau$-pair production.
+\justifying
+\small In the present truth-level benchmark study, the {\color{blue}{LH$\mu$C}} is favored over the {\color{red}LHeC} for probing the anomalous magnetic moment \atau\ in photon-induced $\tau$-pair production.
 \end{alertblock}
 \end{frame}
 %=====================================================
@@ -915,16 +959,31 @@ The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$
 %=====================================================
 \begin{frame}{Outlook}
 \begin{itemize}
- \justifying
-    \item Extend the study from truth level to realistic detector-level analyses.
-    \item Implement acceptance and reconstruction effects for the relevant visible $\tau$ final states.
-    \item Translate the present shape distortions into explicit projected constraints on \atau.
-    \item Generalize the benchmark study to the CP-odd sector and to simultaneous fits in the \((\ctb,\ctw)\) plane.
-    \item Explore luminosity scenarios, optimization of mass-window selections, and systematic uncertainties.
-    \item Connect the future-collider projections more directly to the CMS pp strategy and other current measurements.
+\justifying
+\item Extend the study from truth level to realistic detector-level analyses.
+\item Implement acceptance and reconstruction effects for the relevant visible $\tau$ final states.
+\item Translate the present shape distortions into explicit projected constraints on \atau.
+\item Generalize the benchmark study to the CP-odd sector and to simultaneous fits in the \((\ctb,\ctw)\) plane.
+\item Explore luminosity scenarios, optimization of mass-window selections, and systematic uncertainties.
+\item Connect the future-collider projections more directly to the CMS pp strategy and other current measurements.
 \end{itemize}
 \end{frame}
 %=====================================================
+
+
+
+
+
+
+
+
+%=====================================================
+\begin{frame}[plain,noframenumbering]
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Thank_You.jpg}
+\end{frame}
+%=====================================================
+
 
 
 
@@ -1012,4 +1071,56 @@ LH$\mu$C SM / BSM & 5 & $10^6$ & $5\times10^6$ & $\sim 89.7$ \\
 \end{document}
 
 %=====================================================
+
+
+
+%=====================================================
+\begin{frame}{CMS-inspired observables and why the hard tail matters}
+	\begin{columns}[T]
+		\begin{column}{0.48\textwidth}
+			% \includegraphics[width=\linewidth]{cms_world_aTau_dTau.png}
+			% TODO: add world-comparison screenshot
+			\placeholdergraphic{World status figure for \(\atau\) and \(\dtau\).}{0.44\textheight}
+		\end{column}
+		\begin{column}{0.48\textwidth}
+			% \includegraphics[width=\linewidth]{cms_likelihood_aTau.png}
+			% TODO: add likelihood scan screenshot
+			\placeholdergraphic{Likelihood scan or confidence-interval figure for \(\atau\).}{0.44\textheight}
+		\end{column}
+	\end{columns}
+	\vspace{0.5em}
+	\begin{itemize}
+		\justifying
+		\item In CMS, the accessible phase space and the exclusivity strategy make the mass shape central for BSM sensitivity.
+		\item The future LHeC/LH$\mu$C study follows the same general logic at truth level: the hard region carries the most visible anomalous-coupling information.
+	\end{itemize}
+\end{frame}
+%=====================================================
+
+
+
+%=====================================================
+\begin{frame}{CMS control-region and exclusivity placeholders}
+	\begin{columns}[T]
+		\begin{column}{0.48\textwidth}
+			% \includegraphics[width=\linewidth]{cms_ntracks_validation.png}
+			% TODO: add screenshot of Ntracks validation / low-track excess
+			\placeholdergraphic{Track-multiplicity validation / low-track signal-region motivation.}{0.44\textheight}
+		\end{column}
+		\begin{column}{0.48\textwidth}
+			% \includegraphics[width=\linewidth]{cms_mumu_control_region.png}
+			% TODO: add screenshot of mu mu control region / elastic rescaling figure
+			\placeholdergraphic{Muon control-region figure for dissociative rescaling / elastic normalization.}{0.44\textheight}
+		\end{column}
+	\end{columns}
+	\vspace{0.5em}
+	\begin{itemize}
+		\justifying
+		\item These CMS ingredients are useful reference points for the long-term detector-level development of the lepton--hadron collider study.
+		\item They motivate how future work can move beyond truth-level shapes toward realistic sensitivity projections.
+	\end{itemize}
+\end{frame}
+%=====================================================\\
+
+
 
