@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.27)  12 APR 2026 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.27)  12 APR 2026 12:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -955,66 +955,58 @@ Package: beamercolorthemeAGH 2024/02/02
 ))
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 81.
+(hyperref)                removing `\\' on input line 86.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\color' on input line 90.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\color' on input line 90.
+(hyperref)                removing `\mu' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 90.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mu' on input line 90.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 90.
+(hyperref)                removing `\gamma' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 90.
+(hyperref)                removing `\gamma' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gamma' on input line 90.
+(hyperref)                removing `\to' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gamma' on input line 90.
+(hyperref)                removing `\tau' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\to' on input line 90.
+(hyperref)                removing `superscript' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\tau' on input line 90.
+(hyperref)                removing `\tau' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 90.
+(hyperref)                removing `superscript' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\tau' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 90.
+(hyperref)                removing `math shift' on input line 95.
 
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 9
-0.
+5.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1026,24 +1018,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 (./Hamzeh_Khanpour_a_tau_LHeC_LHmuC.aux)
 \openout1 = `Hamzeh_Khanpour_a_tau_LHeC_LHmuC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1101,7 +1093,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 90.
+Package hyperref Info: Link coloring ON on input line 95.
 
 (./Hamzeh_Khanpour_a_tau_LHeC_LHmuC.out)
 (./Hamzeh_Khanpour_a_tau_LHeC_LHmuC.out)
@@ -1109,74 +1101,74 @@ Package hyperref Info: Link coloring ON on input line 90.
 \openout6 = `Hamzeh_Khanpour_a_tau_LHeC_LHmuC.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 90.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 95.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 90.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 95.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 90.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 95.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 90.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 95.
 \symnumbers=\mathgroup11
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 90.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 95.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 90
+(Font)              `pureletters' in the math version `normal' on input line 95
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 90
+(Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 95
 .
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 90.
+(Font)              `pureletters' in the math version `bold' on input line 95.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/m/it on input line 9
-0.
+5.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 90.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 95.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 95.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 90.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 90.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 95.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 90.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 90.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 90.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 95.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 90.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 90.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 95.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 90.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 95.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 90.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 90.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 90.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 90.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 90.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 90.
-LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 90.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 95.
+LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 95.
 
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
 (Font)              `boldpureletters' in the math version `normal' on input lin
-e 90.
+e 95.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `norma
 l'
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
-90.
+95.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
 (Font)              `boldpureletters' in the math version `bold' on input line 
-90.
+95.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
 
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
-90.
+95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1208,82 +1200,85 @@ Version: 1.6.1, Feb 2024
 ..................................................................
 (./Hamzeh_Khanpour_a_tau_LHeC_LHmuC.nav)
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-90.
+95.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-0.
+5.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-90.
+95.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-90.
+95.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 90.
+(Font)              <6> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 90.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
+(Font)              <5> on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 90.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 90.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-0.
+5.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 90.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 95.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 90.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 95.
 <HELP4CERN.jpg, id=51, 141.95892pt x 77.43214pt>
 File: HELP4CERN.jpg Graphic file (type jpg)
 <use HELP4CERN.jpg>
-Package pdftex.def Info: HELP4CERN.jpg  used on input line 99.
+Package pdftex.def Info: HELP4CERN.jpg  used on input line 105.
 (pdftex.def)             Requested size: 71.13188pt x 38.79985pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 99.
+(Font)              <14.4> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 99.
+(Font)              <10> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 99.
+(Font)              <7> on input line 105.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 105.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 105.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 105.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 105.
+
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 105.
+
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 105.
+
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/e
 nc/dvips/lm/lm-ec.enc}
 
@@ -1311,20 +1306,20 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
 <cms_world_aTau_dTau.jpg, id=221, 449.10643pt x 379.84767pt>
 File: cms_world_aTau_dTau.jpg Graphic file (type jpg)
 <use cms_world_aTau_dTau.jpg>
-Package pdftex.def Info: cms_world_aTau_dTau.jpg  used on input line 208.
+Package pdftex.def Info: cms_world_aTau_dTau.jpg  used on input line 214.
 (pdftex.def)             Requested size: 155.89868pt x 131.85902pt.
 
 [4
 
  <./cms_world_aTau_dTau.jpg>]
-Underfull \hbox (badness 7133) in paragraph at lines 237--237
+Underfull \hbox (badness 7133) in paragraph at lines 243--243
 []\T1/lmss/m/n/10 In hadron or lepton--hadron en-vi-ron-ments,
  []
 
 <gg_tautau.jpg, id=267, 443.94429pt x 300.26465pt>
 File: gg_tautau.jpg Graphic file (type jpg)
 <use gg_tautau.jpg>
-Package pdftex.def Info: gg_tautau.jpg  used on input line 237.
+Package pdftex.def Info: gg_tautau.jpg  used on input line 243.
 (pdftex.def)             Requested size: 155.89868pt x 105.4424pt.
 [5
 
@@ -1334,17 +1329,17 @@ Package pdftex.def Info: gg_tautau.jpg  used on input line 237.
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 34
-1.
+7.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 <Ctb.png, id=385, 927.465pt x 662.475pt>
 File: Ctb.png Graphic file (type png)
 <use Ctb.png>
-Package pdftex.def Info: Ctb.png  used on input line 341.
+Package pdftex.def Info: Ctb.png  used on input line 347.
 (pdftex.def)             Requested size: 69.2877pt x 49.48131pt.
 
-Overfull \hbox (11.38092pt too wide) in paragraph at lines 341--341
+Overfull \hbox (11.38092pt too wide) in paragraph at lines 347--347
  []| [] 
  []
 
@@ -1352,28 +1347,28 @@ Overfull \hbox (11.38092pt too wide) in paragraph at lines 341--341
 
  <./Ctb.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-70.
+76.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1895) in paragraph at lines 370--370
+Underfull \hbox (badness 1895) in paragraph at lines 376--376
 []\T1/lmss/m/n/10.95 Event gen-er-a-tion is per-formed with the
  []
 
 [9
 
 ]
-Overfull \hbox (33.38396pt too wide) in paragraph at lines 490--490
+Overfull \hbox (33.38396pt too wide) in paragraph at lines 496--496
  [][] 
  []
 
 
-Overfull \hbox (33.38396pt too wide) in paragraph at lines 490--490
+Overfull \hbox (33.38396pt too wide) in paragraph at lines 496--496
  [][] 
  []
 
 
-Overfull \hbox (33.38396pt too wide) in paragraph at lines 490--490
+Overfull \hbox (33.38396pt too wide) in paragraph at lines 496--496
  [][] 
  []
 
@@ -1381,14 +1376,14 @@ Overfull \hbox (33.38396pt too wide) in paragraph at lines 490--490
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 527.
+(Font)              <12> on input line 533.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 527.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 533.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 527.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 533.
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 527--527
+Underfull \hbox (badness 1033) in paragraph at lines 533--533
 []\T1/lmss/m/n/10.95 antimuon / $\OML/lmm/m/it/10.95 ^^V[]$ \T1/lmss/m/n/10.95 
 beam in the
  []
@@ -1417,7 +1412,7 @@ beam in the
 ] [16
 
 ]
-Overfull \vbox (2.84154pt too high) detected at line 720
+Overfull \vbox (2.84154pt too high) detected at line 726
  []
 
 [17
@@ -1425,15 +1420,15 @@ Overfull \vbox (2.84154pt too high) detected at line 720
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 724.
+(hyperref)                removing `math shift' on input line 730.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mu' on input line 724.
+(hyperref)                removing `\mu' on input line 730.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 724.
+(hyperref)                removing `math shift' on input line 730.
 
 <plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Invariant_mass_tau_pair_SM_vs_BSM_delta_
 aTau_LHeC.png, id=879, 592.614pt x 650.43pt>
@@ -1442,7 +1437,7 @@ elta_aTau_LHeC.png Graphic file (type png)
 <use plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Invariant_mass_tau_pair_SM_vs_BSM_de
 lta_aTau_LHeC.png>
 Package pdftex.def Info: plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Invariant_mass_t
-au_pair_SM_vs_BSM_delta_aTau_LHeC.png  used on input line 745.
+au_pair_SM_vs_BSM_delta_aTau_LHeC.png  used on input line 751.
 (pdftex.def)             Requested size: 155.89868pt x 171.10268pt.
 <plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Invariant_mass_tau_pair_SM_vs_BSM_delta
 _aTau_LHmuC.png, id=881, 592.614pt x 650.43pt>
@@ -1451,10 +1446,10 @@ delta_aTau_LHmuC.png Graphic file (type png)
 <use plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Invariant_mass_tau_pair_SM_vs_BSM_d
 elta_aTau_LHmuC.png>
 Package pdftex.def Info: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Invariant_mass_
-tau_pair_SM_vs_BSM_delta_aTau_LHmuC.png  used on input line 745.
+tau_pair_SM_vs_BSM_delta_aTau_LHmuC.png  used on input line 751.
 (pdftex.def)             Requested size: 155.89868pt x 171.10268pt.
 
-Overfull \vbox (9.60632pt too high) detected at line 745
+Overfull \vbox (9.60632pt too high) detected at line 751
  []
 
 [18
@@ -1471,7 +1466,7 @@ Tau_LHeC.png Graphic file (type png)
 <use plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Rapidity_tau_pair_SM_vs_BSM_delta_aT
 au_LHeC.png>
 Package pdftex.def Info: plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Rapidity_tau_pai
-r_SM_vs_BSM_delta_aTau_LHeC.png  used on input line 791.
+r_SM_vs_BSM_delta_aTau_LHeC.png  used on input line 797.
 (pdftex.def)             Requested size: 155.89868pt x 171.10268pt.
 <plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Rapidity_tau_pair_SM_vs_BSM_delta_aTau_
 LHmuC.png, id=961, 592.614pt x 650.43pt>
@@ -1480,10 +1475,10 @@ aTau_LHmuC.png Graphic file (type png)
 <use plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Rapidity_tau_pair_SM_vs_BSM_delta_a
 Tau_LHmuC.png>
 Package pdftex.def Info: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Rapidity_tau_pa
-ir_SM_vs_BSM_delta_aTau_LHmuC.png  used on input line 791.
+ir_SM_vs_BSM_delta_aTau_LHmuC.png  used on input line 797.
 (pdftex.def)             Requested size: 155.89868pt x 171.10268pt.
 
-Overfull \vbox (1.57643pt too high) detected at line 791
+Overfull \vbox (1.57643pt too high) detected at line 797
  []
 
 [20
@@ -1498,7 +1493,7 @@ LHeC.png Graphic file (type png)
 <use plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted_L
 HeC.png>
 Package pdftex.def Info: plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_S
-M_MtauTau_weighted_LHeC.png  used on input line 818.
+M_MtauTau_weighted_LHeC.png  used on input line 824.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
 <plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted_LHmu
 C.png, id=997, 1011.78pt x 390.258pt>
@@ -1507,10 +1502,10 @@ _LHmuC.png Graphic file (type png)
 <use plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted_
 LHmuC.png>
 Package pdftex.def Info: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_
-SM_MtauTau_weighted_LHmuC.png  used on input line 818.
+SM_MtauTau_weighted_LHmuC.png  used on input line 824.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
 
-Overfull \hbox (5.59866pt too wide) in paragraph at lines 818--818
+Overfull \hbox (5.59866pt too wide) in paragraph at lines 824--824
 []\T1/lmss/m/n/10.95 This is the most di-rectly phys-i-cal com-par-i-son, be-ca
 use it uses the weighted
  []
@@ -1527,7 +1522,7 @@ niform_LHeC.png Graphic file (type png)
 <use plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_with_Luminosity_Fit_un
 iform_LHeC.png>
 Package pdftex.def Info: plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_wi
-th_Luminosity_Fit_uniform_LHeC.png  used on input line 844.
+th_Luminosity_Fit_uniform_LHeC.png  used on input line 850.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
 <plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_with_Luminosity_Fit_unifo
 rm_LHmuC.png, id=1044, 1011.78pt x 390.258pt>
@@ -1536,7 +1531,7 @@ uniform_LHmuC.png Graphic file (type png)
 <use plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_with_Luminosity_Fit_u
 niform_LHmuC.png>
 Package pdftex.def Info: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_w
-ith_Luminosity_Fit_uniform_LHmuC.png  used on input line 844.
+ith_Luminosity_Fit_uniform_LHmuC.png  used on input line 850.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
  [22
 
@@ -1550,7 +1545,7 @@ ustom_bins_LHeC.png Graphic file (type png)
 <use plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_with_Luminosity_Fit_cu
 stom_bins_LHeC.png>
 Package pdftex.def Info: plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_wi
-th_Luminosity_Fit_custom_bins_LHeC.png  used on input line 869.
+th_Luminosity_Fit_custom_bins_LHeC.png  used on input line 875.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
 <plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_with_Luminosity_Fit_custo
 m_bins_LHmuC.png, id=1088, 1011.78pt x 390.258pt>
@@ -1559,34 +1554,34 @@ custom_bins_LHmuC.png Graphic file (type png)
 <use plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_with_Luminosity_Fit_c
 ustom_bins_LHmuC.png>
 Package pdftex.def Info: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_w
-ith_Luminosity_Fit_custom_bins_LHmuC.png  used on input line 869.
+ith_Luminosity_Fit_custom_bins_LHmuC.png  used on input line 875.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
  [23
 
  <./plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_with_Luminosity_Fit_cus
 tom_bins_LHeC.png> <./plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_Obs_Exp_with
 _Luminosity_Fit_custom_bins_LHmuC.png>]
-Underfull \hbox (badness 5331) in paragraph at lines 900--900
+Underfull \hbox (badness 5331) in paragraph at lines 906--906
 []\T1/lmss/m/n/10.95 The ra-pid-ity spec-trum changes
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 900--900
+Underfull \hbox (badness 1552) in paragraph at lines 906--906
 []\T1/lmss/m/n/10.95 The BSM/SM ra-tio grows with
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 900--900
+Underfull \hbox (badness 1675) in paragraph at lines 906--906
 []\T1/lmss/m/n/10.95 The growth is stronger for the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 900--900
+Underfull \hbox (badness 10000) in paragraph at lines 906--906
 []\T1/lmss/m/n/10 Within the present \T1/lmss/bx/n/10 truth-level
  []
 
 
-Underfull \hbox (badness 2096) in paragraph at lines 900--900
+Underfull \hbox (badness 2096) in paragraph at lines 906--906
 \T1/lmss/m/n/10 ap-pears more promis-ing than the
  []
 
@@ -1596,10 +1591,10 @@ Underfull \hbox (badness 2096) in paragraph at lines 900--900
 <pptautau_CMS.png, id=1188, 2188.175pt x 517.935pt>
 File: pptautau_CMS.png Graphic file (type png)
 <use pptautau_CMS.png>
-Package pdftex.def Info: pptautau_CMS.png  used on input line 930.
+Package pdftex.def Info: pptautau_CMS.png  used on input line 936.
 (pdftex.def)             Requested size: 190.54518pt x 45.09474pt.
 
-Underfull \hbox (badness 3049) in paragraph at lines 930--930
+Underfull \hbox (badness 3049) in paragraph at lines 936--936
 []\T1/lmss/m/n/10 Figure:[] Schematic il-lus-tra-tion of photon-
  []
 
@@ -1613,10 +1608,10 @@ Underfull \hbox (badness 3049) in paragraph at lines 930--930
 <Thank_You.jpg, id=1294, 1445.4pt x 916.8654pt>
 File: Thank_You.jpg Graphic file (type jpg)
 <use Thank_You.jpg>
-Package pdftex.def Info: Thank_You.jpg  used on input line 984.
+Package pdftex.def Info: Thank_You.jpg  used on input line 990.
 (pdftex.def)             Requested size: 448.55458pt x 284.53311pt.
 
-Overfull \hbox (102.1107pt too wide) in paragraph at lines 984--984
+Overfull \hbox (102.1107pt too wide) in paragraph at lines 990--990
  [][] 
  []
 
@@ -1638,14 +1633,14 @@ LHeC.png Graphic file (type png)
 <use plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted_L
 HeC.png>
 Package pdftex.def Info: plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_S
-M_MtauTau_weighted_LHeC.png  used on input line 1067.
+M_MtauTau_weighted_LHeC.png  used on input line 1073.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
 File: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted
 _LHmuC.png Graphic file (type png)
 <use plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted_
 LHmuC.png>
 Package pdftex.def Info: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_
-SM_MtauTau_weighted_LHmuC.png  used on input line 1067.
+SM_MtauTau_weighted_LHmuC.png  used on input line 1073.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
  [32
 
@@ -1691,7 +1686,7 @@ r/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmtt8.pfb>
-Output written on Hamzeh_Khanpour_a_tau_LHeC_LHmuC.pdf (32 pages, 11947889 byte
+Output written on Hamzeh_Khanpour_a_tau_LHeC_LHmuC.pdf (32 pages, 11947603 byte
 s).
 PDF statistics:
  1598 PDF objects out of 1728 (max. 8388607)
