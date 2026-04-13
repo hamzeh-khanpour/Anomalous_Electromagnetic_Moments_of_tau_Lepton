@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.27)  12 APR 2026 12:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.27)  12 APR 2026 20:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1609,9 +1609,9 @@ Underfull \hbox (badness 3049) in paragraph at lines 936--936
 File: Thank_You.jpg Graphic file (type jpg)
 <use Thank_You.jpg>
 Package pdftex.def Info: Thank_You.jpg  used on input line 990.
-(pdftex.def)             Requested size: 448.55458pt x 284.53311pt.
+(pdftex.def)             Requested size: 381.26479pt x 241.84895pt.
 
-Overfull \hbox (102.1107pt too wide) in paragraph at lines 990--990
+Overfull \hbox (34.8209pt too wide) in paragraph at lines 990--990
  [][] 
  []
 
@@ -1633,14 +1633,14 @@ LHeC.png Graphic file (type png)
 <use plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted_L
 HeC.png>
 Package pdftex.def Info: plots_LHeC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_S
-M_MtauTau_weighted_LHeC.png  used on input line 1073.
+M_MtauTau_weighted_LHeC.png  used on input line 1074.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
 File: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted
 _LHmuC.png Graphic file (type png)
 <use plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_SM_MtauTau_weighted_
 LHmuC.png>
 Package pdftex.def Info: plots_LHmuC_SM_vs_BSM_delta_aTau_0p008/Ratio_BSM_over_
-SM_MtauTau_weighted_LHmuC.png  used on input line 1073.
+SM_MtauTau_weighted_LHmuC.png  used on input line 1074.
 (pdftex.def)             Requested size: 169.7594pt x 65.47357pt.
  [32
 
@@ -1686,11 +1686,11 @@ r/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmtt8.pfb>
-Output written on Hamzeh_Khanpour_a_tau_LHeC_LHmuC.pdf (32 pages, 11947603 byte
+Output written on Hamzeh_Khanpour_a_tau_LHeC_LHmuC.pdf (32 pages, 11947734 byte
 s).
 PDF statistics:
- 1598 PDF objects out of 1728 (max. 8388607)
- 1218 compressed objects within 13 object streams
+ 1600 PDF objects out of 1728 (max. 8388607)
+ 1220 compressed objects within 13 object streams
  74 named destinations out of 1000 (max. 500000)
  1267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
