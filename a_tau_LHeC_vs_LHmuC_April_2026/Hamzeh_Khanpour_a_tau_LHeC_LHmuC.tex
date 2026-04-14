@@ -83,7 +83,7 @@
 \subtitle{\small Photon-induced $\gamma\gamma\to\tau^+\tau^-$ production}
 %, EFT interpretation, and truth-level sensitivity comparison}
 \author[Hamzeh Khanpour]{Hamzeh Khanpour \\  % \inst{1}
-{\scriptsize \href{mailto:hamzeh.khanpour@fis.agh.edu.pl}{hamzeh.khanpour@cern.ch}}}
+{\scriptsize \href{mailto:hamzeh.khanpour@cern.ch}{hamzeh.khanpour@cern.ch}}}
 \institute[AGH]{Faculty of Physics and Applied Computer Science\\
 AGH University of Krakow
 }  % \inst{1}
@@ -192,7 +192,7 @@ at (current page.north east)
 \small
 \item Earlier direct constraints came from OPAL, L3, and DELPHI in the LEP era.
 \item Heavy-ion measurements by ATLAS Pb+Pb and CMS Pb+Pb extended the reach using photon-induced processes at low di-$\tau$ masses.
-\item The recent CMS pp analysis observed $\gamma\gamma\to\tau^+\tau^-$ and set significantly improved limits on \atau\ and \dtau [{\color{blue}Rept. Prog. Phys. 87 (2024) 107801}].
+\item The recent CMS pp analysis observed $\gamma\gamma\to\tau^+\tau^-$ and set significantly improved limits on \atau\ and \dtau ~ [{\color{blue}Rept. Prog. Phys. 87 (2024) 107801}].
 \item The present future-collider study is motivated by the same central idea: {\color{red}the BSM effect becomes more visible in the hard region of the mass spectrum.}
 \end{itemize}
 \begin{exampleblock}{Representative CMS pp context}
@@ -206,7 +206,9 @@ at (current page.north east)
 \centering
 \includegraphics[width=\linewidth]{cms_world_aTau_dTau.jpg}
 \caption{\small \justifying
-World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electric dipole moment \(\dtau\), including LEP, heavy-ion, and CMS \(pp\) constraints. }
+World-comparison plot for the anomalous tau magnetic moment \(\atau\),
+%and electric dipole moment \(\dtau\), 
+including LEP, heavy-ion, and CMS \(pp\) constraints [{\color{blue}\small  Rept. Prog. Phys. 87 (2024) 107801}]. } 
 \end{figure}
 \end{column}
 
@@ -223,23 +225,22 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 \begin{itemize}
  \justifying
 \small
-\item The process probes the \(\gamma\tau\tau\) interaction directly and cleanly.
+\item The  $\gamma\gamma\to\tau^+\tau^-$ process probes the \(\gamma\tau\tau\) interaction directly and cleanly.
 \item In hadron or lepton--hadron environments, equivalent-photon emission from the beams can produce a relatively simple electromagnetic initial state.
 \item The invariant-mass spectrum of the $\tau^+\tau^-$ pair is particularly powerful because {\color{blue}anomalous dipole-type couplings harden the high-mass tail}.
-\item This makes the process attractive both for present measurements and for future-machine sensitivity studies.
+\item This makes the process attractive both for present measurements and for future-machine sensitivity studies (FCC, LHeC, LH$\mu$C, ...).
 \end{itemize}
-\takehome{
- \justifying \small The most important discriminating observable is the hard tail of the \(\tau^+\tau^-\) invariant-mass distribution.}
 \end{column}
-
 \begin{column}{0.45\textwidth}
 \begin{figure}
 \includegraphics[width=\linewidth]{gg_tautau.jpg}
 \caption{\small \justifying Representative topology for photon-induced \(\gamma\gamma \to \tau^+\tau^-\) production in proton-based collisions.}
 \end{figure}
 \end{column}
-
 \end{columns}
+\vspace{-0.25cm}
+\takehome{
+\justifying \small The most important discriminating observable is the hard tail of the \(\tau^+\tau^-\) invariant-mass distribution.}
 \end{frame}
 %=====================================================
 
@@ -252,7 +253,7 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 \begin{frame}{General electromagnetic vertex and dipole moments}
 \begin{itemize}
  \justifying
-  \item The most general on-shell electromagnetic vertex of a charged lepton can be parameterized in terms of form factors:
+  \item The most general electromagnetic vertex of a charged lepton can be parameterized in terms of form factors:
 \end{itemize}
 \[
 \Gamma^{\mu}(q^2)=\gamma^{\mu}F_1(q^2)+\frac{i\sigma^{\mu\nu}q_{\nu}}{2m_{\tau}}F_2(q^2)+\sigma^{\mu\nu}q_{\nu}\gamma_5\,F_3(q^2).
@@ -267,8 +268,7 @@ World-comparison plot for the anomalous tau magnetic moment \(\atau\) and electr
 \textcolor{TauGreen}{F_3(0)=-\frac{2m_{\tau}}{e}\,\dtau}.
 \]
 \begin{block}{Interpretation}
-\small
- \justifying
+\justifying
 \textcolor{TauBlue}{\atau} measures the anomalous magnetic dipole moment, while \textcolor{TauGreen}{\dtau} measures the electric dipole moment and is CP-odd.
 \end{block}
 \end{frame}
@@ -371,8 +371,16 @@ Dipole-type SMEFT insertion associated with \(\ctb/\Lam^2\).
 \item \textcolor{TauOrange}{\(\ctb,\ctw,\Lam\)}: EFT parameters
 \end{itemize}
 \end{block}
+\begin{block}{SMEFTsim}
+\scriptsize
+\begin{itemize}
+\item GitHub: \url{https://github.com/SMEFTsim/SMEFTsim}
+\item Reference: \url{https://arxiv.org/abs/2012.11343}
+\end{itemize}
+\end{block}
 \end{column}
 \end{columns}
+
 \end{frame}
 %=====================================================
 
@@ -501,6 +509,7 @@ The SM sample is generated with \texttt{NP=0}. The benchmark BSM sample is gener
 \section{Collider Setups and Event Generation}
 
 
+
 %=====================================================
 \begin{frame}{Future lepton-hadron collider program considered here}
 \begin{columns}[T]
@@ -613,7 +622,7 @@ pdlabel2 = iww
 \begin{column}{0.52\textwidth}
 \begin{block}{Run-card highlights}
 \scriptsize\ttfamily
-mmll = 10.0\\
+mmll = 10.0 GeV\\
 ptl = -1.0\\
 etal = -1.0\\
 drll = -1.0
@@ -634,11 +643,11 @@ drll = -1.0
     \item LHE header cross sections combined with event-count weighting
 \end{itemize}
 \end{block}
-\begin{exampleblock}{Benchmark}
-\small Present comparison: \(\datau=0.008\) at truth level.
-\end{exampleblock}
 \end{column}
 \end{columns}
+\begin{exampleblock}{Benchmark}
+\small Present comparison: $\datau=0.008{\color{magenta}@}\Lam= {\color{red}2}~\mathrm{TeV}$ at truth level.
+\end{exampleblock}
 \end{frame}
 %=====================================================
 
@@ -713,9 +722,9 @@ LH$\mu$C{\color{magenta}@}3.7 TeV & 55.094 & 56.461 & $5\times10^6$ \\
 \frac{\left(d\sigma/dM\right)_{\mathrm{BSM}}}{\left(d\sigma/dM\right)_{\mathrm{SM}}}
 \]
 \begin{itemize}
- \justifying
-    \item \textbf{Physical weighted ratio}: directly compares the differential spectra.
-    \item \textbf{Legacy ratio plots}: retain continuity with the earlier plotting style and support compact linear-fit summaries.
+\justifying
+\item Physical weighted ratio: directly compares the differential spectra.
+\item Legacy ratio plots: retain continuity with the earlier plotting style and support compact linear-fit summaries.
 \end{itemize}
 \end{block}
 \end{column}
@@ -750,6 +759,8 @@ Comparison of the invariant-mass distributions for photon-induced \(\gamma\gamma
 \end{figure}
 \end{frame}
 %=====================================================
+
+
 
 %=====================================================
 \begin{frame}{Findings from the invariant-mass comparison}
@@ -788,7 +799,8 @@ The invariant-mass tail is the most discriminating observable in this study, and
 \justifying
 \small
 %\item The rapidity distributions remain broadly central and are modified only mildly by the benchmark BSM coupling.
-\item The \(\mathrm{LH}\mu\mathrm{C}\) distribution is more central because its \(p\mu^+\) beam-energy configuration is less asymmetric than the \(pe\) setup of the LHeC. As a result, the \(\gamma\gamma\) system has a smaller longitudinal boost, and the \(\tau^+\tau^-\) pair is produced closer to \(Y_{\tau^+\tau^-}\simeq 0\).
+\item The \(\mathrm{LH}\mu\mathrm{C}\) distribution is more central because its \(p\mu^+\) beam-energy configuration is less asymmetric than the \(pe\) setup of the LHeC. 
+%As a result, the \(\gamma\gamma\) system has a smaller longitudinal boost, and the \(\tau^+\tau^-\) pair is produced closer to \(Y_{\tau^+\tau^-}\simeq 0\).
 %\item Compared with the mass spectrum, the rapidity variable is less discriminating for the anomalous magnetic-moment benchmark.
 %\item This supports the strategy of emphasizing the invariant-mass tail as the main sensitivity channel.
 \end{itemize}
@@ -851,6 +863,7 @@ The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$
 %=====================================================
 
 
+
 %=====================================================
 \begin{frame}{Custom-bin linear-fit comparison}
 \begin{columns}[T,onlytextwidth]
@@ -911,6 +924,7 @@ The physical ratio confirms the stronger high-mass BSM/SM deformation at the LH$
 \section{Current CMS Context and Future-Collider Motivation}
 
 
+
 %=====================================================
 \begin{frame}{How the future-collider study connects to CMS pp results}
 \begin{columns}[T]
@@ -943,13 +957,14 @@ Schematic illustration of photon-induced \(\gamma\gamma \to \tau^+\tau^-\) produ
 \section{Conclusions and Outlook}
 
 
+
 %=====================================================
 \begin{frame}{Main conclusions}
 \begin{itemize}
 \justifying
-\item We studied photon-induced \(\gamma\gamma\to\tau^+\tau^-\) production at two future lepton--hadron colliders: the {\color{red}LHeC} and the {\color{blue}LH$\mu$C}.
-\item The benchmark anomalous coupling \(\datau=0.008\) hardens the invariant-mass spectrum relative to the Standard Model.
-\item The rapidity distributions are comparatively less discriminating than the mass spectrum.
+\item We studied photon-induced \(\gamma\gamma\to\tau^+\tau^-\) production at two future lepton-hadron colliders: the {\color{red}LHeC} and the {\color{blue}LH$\mu$C}.
+\item The benchmark anomalous coupling \(\datau=0.008\){\color{magenta}@}\(\Lam= {\color{red}2}~\mathrm{TeV}\) hardens the invariant-mass spectrum relative to the Standard Model.
+\item The rapidity distributions do show a clear collider-dependent effect: the LH$\mu$C distribution is more central than the LHeC one.
 \item The BSM/SM ratio grows with \(\Mtt\), showing that the hard tail is the key region for sensitivity.
 \item Across the invariant-mass, weighted-ratio, and fit-based comparisons, the {\color{blue}LH$\mu$C} exhibits the stronger high-mass response.
 \end{itemize}
@@ -962,14 +977,16 @@ Schematic illustration of photon-induced \(\gamma\gamma \to \tau^+\tau^-\) produ
 
 
 
+
+
 %=====================================================
 \begin{frame}{Outlook}
 \begin{itemize}
 \justifying
-\item Extend the study from truth level to realistic detector-level analyses.
+\item Extend the study from truth level to {\color{blue}{realistic detector-level}} analyses.
 \item Implement acceptance and reconstruction effects for the relevant visible $\tau$ final states.
-\item Translate the present shape distortions into explicit projected constraints on \atau.
-\item Generalize the benchmark study to the CP-odd sector and to simultaneous fits in the \((\ctb,\ctw)\) plane.
+\item Translate the present shape distortions into explicit projected constraints on \atau \, at the  {\color{red}LHeC} and {\color{blue}{LH$\mu$C}}.
+\item Generalize the benchmark study to the CP-odd sector and to simultaneous fits in the \((\ctb, \, \ctw)\) plane.
 \item Explore luminosity scenarios, optimization of mass-window selections, and systematic uncertainties.
 \item Connect the future-collider projections more directly to the CMS pp strategy and other current measurements.
 \end{itemize}
