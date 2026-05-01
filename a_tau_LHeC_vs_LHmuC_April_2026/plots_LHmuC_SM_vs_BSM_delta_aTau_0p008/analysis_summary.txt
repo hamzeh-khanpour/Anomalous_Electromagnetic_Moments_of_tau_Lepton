@@ -4,34 +4,34 @@ Delta a_tau (BSM label): 0.008
 SM sample:
   runs read             : 5
   total events          : 5000000
-  cross section [pb]    : 55.09440000
-  effective lumi [fb^-1]: 90.75332520
+  cross section [pb]    : 66.41420000
+  effective lumi [fb^-1]: 75.28510469
 
 BSM sample:
   runs read             : 5
   total events          : 5000000
-  cross section [pb]    : 56.46080000
-  effective lumi [fb^-1]: 88.55701655
+  cross section [pb]    : 68.06960000
+  effective lumi [fb^-1]: 73.45422920
 
-Average effective luminosity [fb^-1]: 89.65517088
+Average effective luminosity [fb^-1]: 74.36966695
 
 Fit to weighted physical ratio (BSM/SM):
-  slope                 : 0.00041607 +/- 0.00004532
-  intercept             : 1.01684255 +/- 0.00107213
-  chi2                  : 75.715088
+  slope                 : 0.00038128 +/- 0.00004285
+  intercept             : 1.01747785 +/- 0.00104512
+  chi2                  : 125.122632
   dof                   : 98
-  chi2/dof              : 0.772603
+  chi2/dof              : 1.276762
 
 Fit to legacy count ratio (uniform bins):
-  slope                 : 0.00059655 +/- 0.00006122
-  intercept             : 0.97860743 +/- 0.00227716
-  chi2                  : 5.190271
+  slope                 : 0.00055946 +/- 0.00005681
+  intercept             : 0.97983550 +/- 0.00213438
+  chi2                  : 14.802122
   dof                   : 8
-  chi2/dof              : 0.648784
+  chi2/dof              : 1.850265
 
 Fit to legacy count ratio (custom bins):
-  slope                 : 0.00048847 +/- 0.00005017
-  intercept             : 0.98814998 +/- 0.00136435
-  chi2                  : 13.147864
+  slope                 : 0.00047410 +/- 0.00004714
+  intercept             : 0.98837243 +/- 0.00130924
+  chi2                  : 27.384934
   dof                   : 15
-  chi2/dof              : 0.876524
+  chi2/dof              : 1.825662
