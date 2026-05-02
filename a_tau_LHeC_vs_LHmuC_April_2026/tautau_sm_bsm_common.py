@@ -606,7 +606,7 @@ def run_analysis(
     sm_events_dir: Path,
     bsm_events_dir: Path,
     outdir: Path,
-    delta_a_tau: float = 0.008,
+    delta_a_tau: float = 0.005,
     mass_plot_bins: int = 490,
     rapidity_plot_bins: int = 20,
     legacy_ratio_bins: int = 10,

@@ -1,0 +1,16 @@
+sample,run,path,events,cross_section_pb
+SM,1,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_SM_NP_0_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_06/unweighted_events.lhe.gz,1000000,66.41400000
+SM,2,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_SM_NP_0_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_07/unweighted_events.lhe.gz,1000000,66.41400000
+SM,3,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_SM_NP_0_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_08/unweighted_events.lhe.gz,1000000,66.41300000
+SM,4,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_SM_NP_0_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_09/unweighted_events.lhe.gz,1000000,66.41200000
+SM,5,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_SM_NP_0_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_10/unweighted_events.lhe.gz,1000000,66.41800000
+BSM,1,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_06/unweighted_events.lhe.gz,1000000,68.07100000
+BSM,2,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_07/unweighted_events.lhe.gz,1000000,68.07100000
+BSM,3,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_08/unweighted_events.lhe.gz,1000000,68.06700000
+BSM,4,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_09/unweighted_events.lhe.gz,1000000,68.07200000
+BSM,5,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_10/unweighted_events.lhe.gz,1000000,68.06700000
+BSM,6,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_11/unweighted_events.lhe.gz,1000000,68.07400000
+BSM,7,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_12/unweighted_events.lhe.gz,1000000,68.06800000
+BSM,8,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_13/unweighted_events.lhe.gz,1000000,68.06800000
+BSM,9,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_14/unweighted_events.lhe.gz,1000000,68.06500000
+BSM,10,/home/hamzeh-khanpour/MG5_aMC_v3_6_6/aa_tautau_BSM_NP_2_SMEFTsim_top_alphaScheme_UFO_LHmuC/Events/run_15/unweighted_events.lhe.gz,1000000,68.07100000

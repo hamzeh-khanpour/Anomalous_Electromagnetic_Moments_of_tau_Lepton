@@ -29,13 +29,13 @@ def main() -> None:
     parser.add_argument(
         "--outdir",
         type=Path,
-        default=Path("plots_LHeC_SM_vs_BSM_delta_aTau_0p008"),
+        default=Path("plots_LHeC_SM_vs_BSM_delta_aTau_0p005"),
         help="Directory where output plots will be written.",
     )
     parser.add_argument(
         "--delta-a-tau",
         type=float,
-        default=0.008,
+        default=0.005,
         help="Label value used in legends/titles for the BSM benchmark.",
     )
     parser.add_argument("--mass-plot-bins", type=int, default=100)
@@ -58,7 +58,7 @@ def main() -> None:
     custom_edges = _parse_edges(args.custom_ratio_edges) if args.custom_ratio_edges else None
 
     run_analysis(
-        collider_label="LHeC @ 1.2 TeV",
+        collider_label="LHeC@1.2 TeV",
         sm_events_dir=args.sm_events_dir,
         bsm_events_dir=args.bsm_events_dir,
         outdir=args.outdir,

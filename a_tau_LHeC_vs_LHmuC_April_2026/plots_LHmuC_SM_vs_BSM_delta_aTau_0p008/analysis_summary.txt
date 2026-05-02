@@ -1,4 +1,4 @@
-Collider: LHmuC @ 3.7 TeV
+Collider: LHmuC @ 5.3 TeV
 Delta a_tau (BSM label): 0.008
 
 SM sample:

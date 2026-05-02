@@ -29,7 +29,7 @@ def main() -> None:
     parser.add_argument(
         "--outdir",
         type=Path,
-        default=Path("plots_LHmuC_SM_vs_BSM_delta_aTau_0p008"),
+        default=Path("plots_LHmuC_SM_vs_BSM_delta_aTau_0p004"),
         help="Directory where output plots will be written.",
     )
     parser.add_argument(
@@ -58,7 +58,7 @@ def main() -> None:
     custom_edges = _parse_edges(args.custom_ratio_edges) if args.custom_ratio_edges else None
 
     run_analysis(
-        collider_label="LHmuC @ 3.7 TeV",
+        collider_label="LHmuC @ 5.3 TeV",
         sm_events_dir=args.sm_events_dir,
         bsm_events_dir=args.bsm_events_dir,
         outdir=args.outdir,

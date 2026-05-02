@@ -1,0 +1,31 @@
+Collider: LHeC@1.2 TeV
+Delta a_tau (BSM label): 0.005
+
+SM sample:
+  runs read             : 5
+  total events          : 5000000
+  cross section [pb]    : 50.69500000
+  effective lumi [fb^-1]: 98.62905612
+
+BSM sample:
+  runs read             : 10
+  total events          : 10000000
+  cross section [pb]    : 51.92260000
+  effective lumi [fb^-1]: 192.59436161
+
+Average effective luminosity [fb^-1]: 145.61170886
+
+Fit to weighted physical ratio, fine mass bins:
+  slope                 : 0.00028713 +/- 0.00004941
+  intercept             : 1.01902042 +/- 0.00104559
+  chi2/dof              : 1.236818
+
+Fit to weighted ratio, uniform presentation bins:
+  slope                 : 0.00047034 +/- 0.00007494
+  intercept             : 1.00759526 +/- 0.00270258
+  chi2/dof              : 1.334438
+
+Fit to weighted ratio, custom presentation bins:
+  slope                 : 0.00042159 +/- 0.00005908
+  intercept             : 1.01390281 +/- 0.00154581
+  chi2/dof              : 1.182842
